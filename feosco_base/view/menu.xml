@@ -2,27 +2,14 @@
 <openerp>
     <data>
 
-        <menuitem name="FEOS Tools"
-            id="menu_feosco_tool"
-            sequence="0"/>
+        <menuitem id="menu_besco_management" name="BESCO" parent="base.menu_administration" sequence="100"/>
 
-
-        <menuitem name="System Configuration"
-            id="menu_sys_config_root"
-            sequence="500" groups="base.group_system_config"/>
-        
-        <!-- Master Data -->
-        
-
-
-        <menuitem id="menu_besco_base" name="Thiết lập Dữ liệu"/>
-
-        <menuitem id="menu_address"  parent="menu_besco_base" name="Quản lý địa chỉ"/>
+        <menuitem id="menu_address"  parent="menu_besco_management" name="Quản lý địa chỉ"/>
 
         <menuitem action="base.action_country" id="menu_feosco_country" parent="menu_address" sequence="30"/>
 
         <menuitem name="Dữ liệu mẩu" id="menu_besco_master_data"
-        		parent="menu_besco_base"
+        		parent="menu_besco_management"
         		/>
             	
           

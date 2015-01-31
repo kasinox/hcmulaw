@@ -49,8 +49,8 @@
             <field name="search_view_id" ref="view_feosco_master_data_filter"/>
         </record>
 
-        <menuitem name="Master Data" id="menu_feosco_master_data" 
-        		parent="menu_feosco_master_data_root" 
+        <menuitem name="Thiết lập dữ liệu" id="menu_feosco_master_data"
+        		parent="menu_besco_master_data"
         		action="action_feosco_master_data"/>
 
     </data>

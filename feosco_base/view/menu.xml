@@ -22,7 +22,7 @@
         <menuitem action="base.action_country" id="menu_feosco_country" parent="menu_address" sequence="30"/>
 
         <menuitem name="Dữ liệu mẩu" id="menu_besco_base"
-        		parent="feosco_base.menu_feosco_root"
+        		parent="menu_besco_base"
         		/>
             	
           

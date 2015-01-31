@@ -59,7 +59,8 @@
         </record>
         
         <menuitem name="City" id="menu_feosco_city" 
-        		parent="feosco_base.menu_feosco_localisation"
+        		parent="menu_address"
+                sequence="10"
         		action="action_feosco_city"/>
         
     </data>

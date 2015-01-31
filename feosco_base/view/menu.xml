@@ -6,12 +6,7 @@
             id="menu_feosco_tool"
             sequence="0"/>
 
-        <!-- Top menu item -->
-        <menuitem name="FEOSCO"
-            id="menu_feosco_root"
-            parent="base.menu_administration"
-            sequence="90"/>
-        
+
         <menuitem name="System Configuration"
             id="menu_sys_config_root"
             sequence="500" groups="base.group_system_config"/>
@@ -22,35 +17,11 @@
         		parent="feosco_base.menu_feosco_root"
         		/>
         
-       	<!-- Localization -->
-        <menuitem id="menu_feosco_localisation" name="Localization" parent="menu_feosco_root"/>
+        <menuitem id="menu_besco_base" name="Thiết lập Dữ liệu"/>
 
-        <menuitem action="base.action_country" id="menu_feosco_country" parent="menu_feosco_localisation"/>
-        
-        <!-- Users -->
-      <!--   <menuitem id="feosco_menu_action_res_users_root" parent="menu_feosco_root" name="Users" sequence="1"/>
-		<menuitem action="base.action_res_users" id="feosco_menu_action_res_users_sub" parent="menu_feosco_root"/>
-		 -->
-		<!-- Company -->
-		<!-- <menuitem id="feosco_menu_res_company_global" parent="menu_feosco_root" name="Companies" sequence="2"/>
-		<menuitem action="base.action_res_company_form" id="feosco_menu_action_res_company_form" parent="menu_feosco_root"/>
-		 -->
-		<!-- Translation -->
-       <!-- 	<menuitem id="feosco_menu_translation" name="Translations" parent="menu_feosco_root" sequence="3"/>
-       	<menuitem action="base.res_lang_act_window" id="feosco_menu_res_lang_act_window" parent="menu_feosco_root" sequence="1"/>
-       	<menuitem name="Load a Translation" action="base.action_view_base_language_install" id="feosco_menu_view_base_language_install"
-            	parent="menu_feosco_root" sequence="2"/>
-             -->	
-        <!-- Mail -->
-        <!-- <menuitem id="feosco_menu_email" name="Emails" parent="menu_feosco_root" sequence="4"/>
-        <menuitem parent="menu_feosco_root" id="feosco_menu_action_fetchmail_server_tree" action="fetchmail.action_email_server_tree" name="Incoming Mail Servers" sequence="1"/>
-        <menuitem id="feosco_menu_mail_servers" parent="menu_feosco_root" action="base.action_ir_mail_server_list" sequence="2" name="Outgoing Mail Servers"/>
-		 -->
-		 <!-- Configuration -->
-		 <!--
-		<menuitem id="feosco_menu_config" name="Configuration" parent="menu_sys_config_root" sequence="1"/>
-		<menuitem id="feosco_menu_general_configuration" parent="feosco_menu_config"
-            	sequence="100" action="base_setup.action_general_configuration"/> -->
+        <menuitem id="menu_address"  parent="menu_besco_base" name="Quản lý địa chỉ"/>
+
+        <menuitem action="base.action_country" id="menu_feosco_country" parent="menu_address" sequence="30"/>
             	
           
 

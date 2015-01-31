@@ -58,8 +58,9 @@
             <field name="search_view_id" ref="view_feosco_district_filter"/>
         </record>
         
-        <menuitem name="District" id="menu_feosco_district" 
-        		parent="feosco_base.menu_feosco_localisation"
+        <menuitem name="District" id="menu_feosco_district"
+                parent="menu_address"
+                sequence="20"
         		action="action_feosco_district"/>
         
     </data>

@@ -14,7 +14,7 @@
     ],
     'depends': ['base', 'fetchmail'],
     'data': [
-             'security/res.groups.csv',
+             # 'security/res.groups.csv',
              'view/menu.xml',
              'view/master_data_view.xml',
              'view/res_partner_view.xml',

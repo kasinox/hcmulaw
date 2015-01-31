@@ -657,11 +657,6 @@ msgid "Location Use"
 msgstr "Vị trí sử dụng"
 
 #. module: feosco_account_asset
-#: field:account.asset.asset,feosco_stock_id:0
-msgid "Location Warehouse"
-msgstr "Đang ở kho"
-
-#. module: feosco_account_asset
 #: model:ir.ui.menu,name:feosco_account_asset.feosco_menu_action_location_form
 msgid "Locations"
 msgstr "Địa điểm"

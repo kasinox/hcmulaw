@@ -201,7 +201,6 @@ class account_asset_asset(osv.osv):
         'feosco_status_id': fields.many2one('feosco.asset.status', 'Status', readonly=True),
         'feosco_image_his': fields.binary('Image old', readonly=True, states={'draft': [('readonly',False)]}),
         'feosco_location': fields.char('Location Use'),
-        'feosco_stock_id': fields.many2one('stock.location', 'Location Warehouse'),
         'feosco_uom_id': fields.many2one('product.uom', 'Uom'),
         'feosco_scan_time_id': fields.many2one('feosco.scan.time', 'Scan schedule'),
         'method_time': fields.selection([

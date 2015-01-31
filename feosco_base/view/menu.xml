@@ -16,7 +16,7 @@
         <menuitem name="Master Data" id="menu_feosco_master_data_root" 
         		parent="feosco_base.menu_feosco_root"
         		/>
-        
+
         <menuitem id="menu_besco_base" name="Thiết lập Dữ liệu"/>
 
         <menuitem id="menu_address"  parent="menu_besco_base" name="Quản lý địa chỉ"/>

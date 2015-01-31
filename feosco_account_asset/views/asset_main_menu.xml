@@ -68,11 +68,6 @@
               sequence="50"
               groups="group_asset_it_user"/>
 
-            <menuitem action="stock.action_location_form"
-                id="feosco_menu_action_location_form"
-                parent="menu_feosco_asset_config"
-                sequence="10"/>
-
             <menuitem action="product.product_uom_form_action"
                 id="feosco_menu_product_uom_form_action"
                 parent="menu_feosco_asset_config"

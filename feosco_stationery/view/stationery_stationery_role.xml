@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="form_stationery_stationery_role" model="ir.ui.view">
+            <field name="name">stationery.stationery.role.form</field>
+            <field name="model">stationery.stationery.role</field>
+            <field name="arch" type="xml">
+                <form string="Role">
+                    <header>
+
+                    </header>
+                    <sheet>
+                        <div class="oe_left">
+                            <field name="name"/>
+                        </div>
+                        <group>
+                            <field name="active"/>
+                            <field name="dt_from"/>
+                            <field name="dt_to"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="tree_stationery_stationery_role" model="ir.ui.view">
+            <field name="name">stationery.stationery.role.tree</field>
+            <field name="model">stationery.stationery.role</field>
+            <field name="arch" type="xml">
+                <tree string="Role">
+                    <field name="name"/>
+                    <field name="active"/>
+                    <field name="dt_from"/>
+                    <field name="dt_to"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="act_stationery_stationery_role" model="ir.actions.act_window">
+            <field name="name">Role</field>
+            <field name="res_model">stationery.stationery.role</field>
+            <field name="view_type">form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Các chu kỳ cấp phát văn phòng phẩm, theo quý, tháng năm....
+                </p>
+            </field>
+        </record>
+
+
+        <menuitem id="menu_act_stationery_stationery_role"
+                  action="act_stationery_stationery_role"
+                  parent="menu_stationeny_configuration"
+                  sequence="30"/>
+
+
+    </data>
+</openerp>

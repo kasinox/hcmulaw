@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+
+        <record id="view_feosco_barcode_type_form" model="ir.ui.view">
+            <field name="name">feosco.barcode.type.form</field>
+            <field name="model">feosco.barcode.type</field>
+            <field name="arch" type="xml">
+                <form string="Barcode Type" create="false" edit="false" delete="false">
+                    <group>
+                        <field name="name" readonly="1"/>
+                        <field name="code" readonly="1"/>
+                        <field name="active" readonly="1"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_feosco_barcode_type_tree" model="ir.ui.view">
+            <field name="name">feosco.barcode.type.tree</field>
+            <field name="model">feosco.barcode.type</field>
+            <field name="arch" type="xml">
+                <tree string="Barcode Type" create="false" edit="false" delete="false">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="action_feosco_barcode_type" model="ir.actions.act_window">
+            <field name="name">Barcodes</field>
+            <field name="res_model">feosco.barcode.type</field>
+            <field name="view_type">form</field>
+        </record>
+
+
+        <menuitem id="menu_feosco_barcode_type"
+                  parent="menu_feosco_asset_config_asset"
+                  action="action_feosco_barcode_type"
+                  sequence="1"/>
+
+
+    </data>
+</openerp>

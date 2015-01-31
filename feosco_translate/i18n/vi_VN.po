@@ -1,0 +1,54 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* feosco_translate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-24 08:51+0000\n"
+"PO-Revision-Date: 2014-11-24 15:52+0800\n"
+"Last-Translator: Bruce Nguyen <thanhchatvn@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: feosco_translate
+#: field:feosco.translate,create_uid:0
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: feosco_translate
+#: field:feosco.translate,create_date:0
+msgid "Created on"
+msgstr "Tạo vào"
+
+#. module: feosco_translate
+#: field:feosco.translate,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: feosco_translate
+#: field:feosco.translate,write_uid:0
+msgid "Last Updated by"
+msgstr "Cập nhật cuối bởi"
+
+#. module: feosco_translate
+#: field:feosco.translate,write_date:0
+msgid "Last Updated on"
+msgstr "Cập nhật cuối vào"
+
+#. module: feosco_translate
+#: view:feosco.translate:feosco_translate.form_feosco_translate
+#: model:ir.actions.act_window,name:feosco_translate.act_feosco_translate
+#: model:ir.ui.menu,name:feosco_translate.menu_form_feosco_translate
+msgid "Translate"
+msgstr "Dịch thuật"
+
+#. module: feosco_translate
+#: view:feosco.translate:feosco_translate.form_feosco_translate
+msgid "Translate Vietnamsese"
+msgstr "Dịch sang tiếng việt"

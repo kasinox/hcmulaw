@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!--
+            Import Export view
+         -->
+
+        <record model="ir.ui.view" id="view_feosco_export_import">
+            <field name="name">feosco.export.import.form</field>
+            <field name="model">feosco.export.import</field>
+            <field name="arch" type="xml">
+                <form string="In Out data">
+                    <header>
+                        <div class="oe_right" attrs="{'invisible': [('state', '=', 'succed')]}">
+                            <button name="import_excel" string="In" type="object" icon="terp-camera_test" attrs="{'invisible': [('action', '=', 'export')]}" class="oe_highlight"/>
+                            <button name="export_excel" string="Out" type="object" icon="terp-camera_test" attrs="{'invisible': [('action', '=', 'import')]}" class="oe_highlight"/>
+                        </div>
+                        <button special="cancel" string="Cancel" icon="gtk-cancel"  class="oe_highlight"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group colspan="4">
+                            <separator string="Please attach file" attrs="{'invisible': [('action', '!=', 'import')]}" colspan="4"/>
+                            <field name="action" on_change="action_change(action)"/>
+                            <field name="barcode_type_id" widget="selection" attrs="{'invisible': [('action', '=', 'export')]}"/>
+                            <field name="file" attrs="{'required': [('action', '=', 'import')], 'invisible': [('action', '=', 'export')]}"/>
+                            <field name="path_image" invisible="1"/>
+                            <field name="output_type" attrs="{'invisible': [('action', '=', 'import')], 'required': [('action', '!=', 'import')]}"/>
+                            <field name="scan_time_id" attrs="{'invisible': [('action', '=', 'import')], 'required': [('output_type', 'in', ['scan', 'not_scan'])]}" widget="selection"/>
+                            <field name="excel_format" readonly="1" widget="url" attrs="{'invisible': [('action', '=', 'export')]}"/>
+                            <field name="department_id" attrs="{'invisible': [('action', '=', 'import')]}"/>
+                            <field name="user_id" attrs="{'invisible': [('action', '=', 'import')]}"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_view_feosco_export_import">
+            <field name="name">In out excel</field>
+            <field name="res_model">feosco.export.import</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+		
+
+        <menuitem parent="menu_assset_reporting"
+                  id="menu_action_view_feosco_export_import"
+                  sequence="1"
+                  action="action_view_feosco_export_import"/>
+
+        <act_window id="client_action_view_feosco_export_import"
+             multi="True"
+             key2="client_action_multi" name="Xuất nhập dữ liệu"
+             res_model="feosco.export.import"
+             src_model="account.asset.asset"
+             view_mode="form"
+             target="new"
+             view_type="form"
+             view_id="view_feosco_export_import"/>
+
+
+    </data>
+</openerp>

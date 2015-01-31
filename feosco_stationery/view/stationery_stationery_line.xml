@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="form_stationery_stationery_line" model="ir.ui.view">
+            <field name="name">stationery.stationery.line.form</field>
+            <field name="model">stationery.stationery.line</field>
+            <field name="arch" type="xml">
+                <form string="Stationery Line">
+                    <header>
+
+                    </header>
+                    <sheet>
+                        <div class="oe_left">
+                            <h1>
+                                <field name="name"/>
+                                <field name="stationery_id"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <field name="qty"/>
+                            <field name="customer_id"/>
+                            <field name="uom_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="tree_stationery_stationery_line" model="ir.ui.view">
+            <field name="name">stationery.stationery.line.tree</field>
+            <field name="model">stationery.stationery.line</field>
+            <field name="arch" type="xml">
+                <tree string="Stationery Line">
+                    <field name="stationery_id"/>
+                    <field name="qty"/>
+                    <field name="customer_id"/>
+                    <field name="uom_id"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="act_stationery_stationery_line" model="ir.actions.act_window">
+            <field name="name">Stationery Lines</field>
+            <field name="res_model">stationery.stationery.line</field>
+            <field name="view_type">form</field>
+        </record>
+
+
+        <menuitem id="menu_act_stationery_stationery_line"
+                  action="act_stationery_stationery_line"
+                  parent="menu_stationeny_configuration"
+                  sequence="40"/>
+
+
+    </data>
+</openerp>

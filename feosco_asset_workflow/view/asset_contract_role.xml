@@ -1,0 +1,51 @@
+<openerp>
+	<data>
+
+		<record model="ir.ui.view" id="asset_contract_role_">
+            <field name="name">asset.contract.role.form</field>
+            <field name="model">asset.contract.role</field>
+            <field name="arch" type="xml">
+                <form string="Điều khoản HĐ">
+	                <sheet>
+                        <h1>
+                            <label string="Tên"/>
+                            <field name="name" class="oe_inline"/>
+                        </h1>
+						<group>
+                            <field name="active"/>
+							<field name="note"/>
+						</group>
+	                </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="asset_contract_role_tree">
+            <field name="name">asset.contract.role.tree</field>
+            <field name="model">asset.contract.role</field>
+            <field name="arch" type="xml">
+                <tree string="Điều khoản HĐ">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="asset_contract_role_search">
+            <field name="name">asset.contract.role.tree</field>
+            <field name="model">asset.contract.role</field>
+            <field name="arch" type="xml">
+                <search string="Điều khoản HĐ">
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_asset_contract_role">
+            <field name="name">Điều khoản Hợp đồng</field>
+            <field name="res_model">asset.contract.role</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+	</data>
+</openerp>

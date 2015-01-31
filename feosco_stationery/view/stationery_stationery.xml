@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="form_stationery_stationery" model="ir.ui.view">
+            <field name="name">stationery.stationery.form</field>
+            <field name="model">stationery.stationery</field>
+            <field name="arch" type="xml">
+                <form string="Stationery">
+                    <header>
+
+                    </header>
+                    <sheet>
+                        <div class="oe_left">
+                            <h1>
+                                <field name="name" class="oe_inline"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <field name="code"/>
+                            <field name="qty"/>
+                            <field name="qty_use"/>
+                            <field name="qty_onhand"/>
+                        </group>
+                        <notebook>
+                            <page string="Information">
+                                <group>
+                                    <field name="line_ids" nolabel="1" colspan="4" model="tree">
+                                        <tree string="Line" editable="top">
+                                            <field name="stationery_id"/>
+                                            <field name="qty"/>
+                                        </tree>
+                                    </field>
+                                    <field name="limit_ids" nolabel="1" colspan="4"/>
+                                </group>
+                            </page>
+                            <page string="Use">
+                                <field name="line_use_ids" nolabel="1" colspan="4">
+                                    <tree string="Used" editable="top">
+                                        <field name="qty"/>
+                                        <field name="reason"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="tree_stationery_stationery" model="ir.ui.view">
+            <field name="name">stationery.stationery.tree</field>
+            <field name="model">stationery.stationery</field>
+            <field name="arch" type="xml">
+                <tree string="Stationery">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="qty"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="act_stationery_stationery" model="ir.actions.act_window">
+            <field name="name">Stationeries</field>
+            <field name="res_model">stationery.stationery</field>
+            <field name="view_type">form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Các văn phòng phẩm hiện có của công ty
+                </p>
+            </field>
+        </record>
+
+
+        <menuitem id="menu_act_stationery_stationery"
+                  action="act_stationery_stationery"
+                  parent="menu_stationeny_management"
+                  sequence="30"/>
+
+
+    </data>
+</openerp>

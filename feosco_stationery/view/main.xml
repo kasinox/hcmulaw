@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+
+        <menuitem id="menu_stationeny_root"
+              name="Stationenry"
+              icon="terp-stock"
+              sequence="60"
+              groups="account.group_account_invoice"/>
+
+
+        <menuitem id="menu_stationeny_management"
+              parent="menu_stationeny_root"
+              name="Stationenry"
+              icon="terp-stock"
+              sequence="10"
+              groups="account.group_account_invoice"/>
+
+        <menuitem id="menu_stationeny_request"
+              parent="menu_stationeny_root"
+              name="Request"
+              icon="terp-stock"
+              sequence="20"
+              groups="account.group_account_invoice"/>
+
+        <menuitem id="menu_stationeny_report"
+              parent="menu_stationeny_root"
+              name="Report"
+              icon="terp-stock"
+              sequence="30"
+              groups="account.group_account_manager"/>
+
+
+        <menuitem id="menu_stationeny_configuration"
+              parent="menu_stationeny_root"
+              name="Configuration"
+              icon="terp-stock"
+              sequence="40"
+              groups="account.group_account_manager"/>
+
+    </data>
+</openerp>

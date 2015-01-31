@@ -1,0 +1,92 @@
+<openerp>
+
+	<data>
+
+		<menuitem parent="feosco_account_asset.menu_feosco_root"
+		          name="Quy trình tài sản"
+		          sequence="1"
+		          id="menu_asset_wkf"
+		          groups="feosco_account_asset.group_asset_user"/>
+
+		<menuitem parent="menu_asset_wkf"
+		          action="asset_request_action"
+		          id="menu_asset_request_action"
+		          sequence="10"
+		          groups="feosco_account_asset.group_asset_user"/>
+
+		<menuitem parent="menu_asset_wkf"
+		          action="asset_contract_action"
+		          id="menu_asset_contract_action"
+		          sequence="20"
+				  groups="feosco_account_asset.group_asset_wareshouse_user"/>
+
+		<menuitem parent="menu_asset_wkf"
+		          action="action_asset_stock"
+		          id="menu_action_asset_stock"
+		          sequence="30"
+				  groups="feosco_account_asset.group_asset_wareshouse_user"/>
+
+		<menuitem parent="menu_asset_wkf"
+		          action="action_asset_contract_role"
+		          id="menu_action_asset_contract_role"
+		          sequence="40"
+				  groups="feosco_account_asset.group_asset_wareshouse_user"/>
+
+
+		<record id="feosco_action_invoice_tree" model="ir.actions.act_window">
+            <field name="name">Uỷ nhiệm chi</field>
+            <field name="res_model">account.invoice</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar,graph</field>
+            <field name="view_id" ref="account.invoice_tree"/>
+            <field name="context">{'type':'out_invoice'}</field>
+            <field name="search_view_id" ref="account.view_account_invoice_filter"/>
+        </record>
+
+		<menuitem parent="menu_asset_wkf"
+		          action="feosco_action_invoice_tree"
+		          id="menu_feosco_action_invoice_tree"
+		          sequence="100"
+				  groups="feosco_account_asset.group_asset_wareshouse_user"/>
+
+		<record id="feosco_action_partner_supplier_form" model="ir.actions.act_window">
+			<field name="name">Nhà CC thiết bị</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">res.partner</field>
+			<field name="view_type">form</field>
+			<field name="domain">[]</field>
+			<field name="view_mode">kanban,tree,form</field>
+			<field name="context">{'search_default_supplier': 1,'default_customer': 0,'default_supplier': 1}</field>
+			<field name="filter" eval="True"/>
+		</record>
+
+		<menuitem parent="menu_asset_wkf"
+		          action="feosco_action_partner_supplier_form"
+		          id="menu_feosco_action_partner_supplier_form"
+		          sequence="110"
+		          groups="feosco_account_asset.group_asset_wareshouse_user"/>
+
+
+		<record id="feosco_action_res_bank_form" model="ir.actions.act_window">
+            <field name="name">Ngân hàng</field>
+            <field name="res_model">res.bank</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click vào đây tạo mới ngân hàng
+              </p>
+            </field>
+        </record>
+
+        <menuitem action="feosco_action_res_bank_form"
+                  id="menu_feosco_action_res_bank_form"
+                  parent="menu_asset_wkf"
+                  sequence="120"
+                  groups="feosco_account_asset.group_asset_wareshouse_user"/>
+
+
+
+
+	</data>
+</openerp>

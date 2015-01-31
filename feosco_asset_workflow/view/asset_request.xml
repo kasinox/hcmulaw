@@ -1,0 +1,105 @@
+<openerp>
+	<data>
+
+		<record model="ir.ui.view" id="asset_request_form">
+            <field name="name">asset.request.form</field>
+            <field name="model">asset.request</field>
+            <field name="arch" type="xml">
+                <form string="Đề xuất">
+                    <header>
+						<field name="state" widget="statusbar" colspan="4"/>
+                        <button string="Đề nghị cấp"
+                                type="object" name="act_confirm"
+                                states="draft" class="oe_highlight"
+                                groups="feosco_account_asset.group_asset_user"/>
+                        <button string="Quản trị TB duyệt" type="object"
+                                name="act_approved1" states="approved1"
+                                class="oe_highlight"
+                                groups="feosco_account_asset.group_asset_wareshouse_user"/>
+
+                        <button string="Ban giám hiệu duyệt"
+                                type="object" name="act_approved2"
+                                states="approved2" class="oe_highlight"
+                                groups="feosco_account_asset.group_asset_wareshouse_user"/>
+
+                        <button string="Đã mua về"
+                                type="object" name="act_approved3"
+                                states="approved3" class="oe_highlight"
+                                groups="feosco_account_asset.group_asset_wareshouse_user"/>
+
+                        <button string="Từ chối" type="object"
+                                name="act_cancel" states="approved1,approved2"
+                                class="oe_highlight"
+                                groups="feosco_account_asset.group_asset_wareshouse_user"/>
+
+                        <button string="Đưa về phác thảo"
+                                type="object" name="act_reset"
+                                states="act_approved1,act_approved2"
+                                class="oe_highlight"
+                                groups="feosco_account_asset.group_asset_wareshouse_user"/>
+                    </header>
+	                <sheet>
+                        <h1>
+                            <label for="name" string="Tên đề xuất"/>
+                            <field name="name" class="oe_inline"/>
+                        </h1>
+                        <group>
+                            <field name="department_id"/>
+                            <field name="note"/>
+		                    <field name="line_ids">
+                                <tree string="Tài sản yêu cầu" editable="top" colors="red: state == 'cancel'; grey: state == 'cancel'; blue: state == 'done'">
+                                    <field name="name"/>
+                                    <field name="type"/>
+                                    <field name="qty"/>
+                                    <field name="state" readonly="True"/>
+                                </tree>
+                            </field>
+                        </group>
+
+	                </sheet>
+                    <div class="oe_chatter">
+	                    <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+	                    <field name="message_ids" widget="mail_thread"/>
+	                </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="asset_request_tree">
+            <field name="name">asset.request.tree</field>
+            <field name="model">asset.request</field>
+            <field name="arch" type="xml">
+                <tree string="Đề xuất" colors="gray: state == 'cancel';
+                    blue: state in ['approved1', 'approved2', 'approved3']">
+                    <field name="name"/>
+                    <field name="note"/>
+                    <field name="department_id"/>
+                    <field name="create_date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="asset_request_search">
+            <field name="name">asset.request.tree</field>
+            <field name="model">asset.request</field>
+            <field name="arch" type="xml">
+                <search string="Đề xuất">
+                    <field name="name"/>
+                    <field name="note"/>
+                    <field name="state"/>
+                    <filter string="Phòng ban" context="{'group_by': 'department_id'}"/>
+                    <filter string="Trạng thái" context="{'group_by': 'state'}"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="asset_request_action">
+            <field name="name">Đề xuất</field>
+            <field name="res_model">asset.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+	</data>
+</openerp>

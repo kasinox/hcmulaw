@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<openerp>
+    <data>
+
+         <record model="ir.ui.view" id="view_feosco_scan_time_form">
+             <field name="name">feosco.scan.time.form</field>
+             <field name="model">feosco.scan.time</field>
+             <field name="type">form</field>
+             <field name="arch" type="xml">
+                 <form string="Schedule Inventory">
+                     <notebook>
+                         <page string="Cấu hình chu kì kiểm kê">
+                             <group>
+                                 <field name="name"/>
+                                 <field name="dt_from"/>
+                                 <field name="dt_to"/>
+                             </group>
+
+                         </page>
+                     </notebook>
+                 </form>
+             </field>
+         </record>
+
+        <record model="ir.ui.view" id="view_feosco_scan_time_tree">
+             <field name="name">feosco.scan.time.tree</field>
+             <field name="model">feosco.scan.time</field>
+             <field name="type">tree</field>
+             <field name="arch" type="xml">
+                 <tree string="Schedule Inventory" colors="blue: active_scan == True">
+                     <field name="active_scan" invisible="1"/>
+                     <field name="name" select="1"/>
+                     <field name="dt_from" select="1"/>
+                     <field name="dt_to" select="1"/>
+                 </tree>
+             </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_feosco_scan_time">
+            <field name="name">Schedule Inventory</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">feosco.scan.time</field>
+            <field name="view_type">form</field>
+        </record>
+
+        <menuitem parent="menu_feosco_asset_scan"
+                  id="menu_action_feosco_scan_time"
+                  action="action_feosco_scan_time"
+                  sequence="2"/>
+
+    </data>
+</openerp>

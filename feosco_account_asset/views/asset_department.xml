@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_feosco_asset_department_form">
+            <field name="name">feosco.asset.department.form</field>
+            <field name="model">feosco.asset.department</field>
+            <field name="arch" type="xml">
+                <form string="Phòng ban">
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="sum"/>
+                            <field name="code"/>
+                            <field name="phone"/>
+                            <field name="parent_id"/>
+                            <field name="company_id" groups="base.group_system"/>
+                        </group>
+                        <group>
+                            <field name="limit"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="asset_ids" nolabel="1" colspan="4" readonly="True"/>
+                    </group>
+                    <group>
+                        <separator string="Notes" colspan="4"/>
+                        <field name="note" nolabel="1"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_feosco_asset_department_tree">
+             <field name="name">feosco.asset.department.tree</field>
+             <field name="model">feosco.asset.department</field>
+             <field name="arch" type="xml">
+                 <tree string="Phòng ban">
+                     <field name="name"/>
+                     <field name="code"/>
+                     <field name="phone"/>
+                     <field name="limit"/>
+                     <field name="parent_id"/>
+                     <field name="company_id" groups="base.group_system"/>
+                 </tree>
+             </field>
+         </record>
+
+        <record model="ir.actions.act_window" id="action_feosco_asset_department">
+            <field name="name">Departments</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">feosco.asset.department</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_feosco_asset_department_report">
+            <field name="name">Reporting Department</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">feosco.asset.department</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <report
+            string="Report By Department"
+            id="action_report_department"
+            model="feosco.asset.department"
+            report_type="qweb-pdf"
+            name="feosco_account_asset.report_department"
+            file="feosco_account_asset.report_department"
+        />
+        
+        <menuitem action="action_feosco_asset_department_report" id="menu_action_feosco_asset_department_report" parent="menu_assset_reporting" sequence="30"/>
+        <menuitem action="action_feosco_asset_department" id="menu_action_feosco_asset_department_config" parent="menu_feosco_asset_config" sequence="1"/>
+
+    </data>
+</openerp>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_move_department">
+            <field name="name">feosco.move.department.form</field>
+            <field name="model">feosco.move.department</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Move Department">
+                    <sheet>
+                        <header>
+                            <button name="moving" string="Thực hiện" type='object' icon="gtk-execute"/>
+                        </header>
+                        <group>
+                            <group>
+                                <field name="department_id" string="Chuyển qua phòng" options="{'no_edit': true, 'no_create': true}"/>
+                                <field name="user_id" string="Người dùng mới" options="{'no_edit': true, 'no_create': true}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="act_windown_view_move_department"
+            multi="True"
+            key2="client_action_multi"
+            name="Move Department"
+            res_model="feosco.move.department"
+            src_model="account.asset.asset"
+            view_mode="form"
+            target="new"
+            view_type="form"
+            view_id="view_move_department"/>
+    </data>
+</openerp>

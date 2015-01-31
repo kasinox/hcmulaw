@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+	    <record model="ir.ui.view" id="feosco_print_selection">
+	        <field name="name">Print Label Form</field>
+	        <field name="model">feosco.print.selection</field>
+	        <field name="arch" type="xml">
+	            <form string="Printer">
+                    <header>
+                        <button string="In" states='draft' type="object" name="act_print" icon="gtk-print"/>
+                        <button icon="gtk-cancel" special="cancel" string="Cancel"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_right">
+                            <field name="state" widget="statusbar"/>
+                        </div>
+                        <group>
+                            <group>
+                                <separator string="Type"></separator>
+                                <field name="print_type" attrs="{'invisible': [('state', '=', 'done')]}" nolabel="1" colspan="4"/>
+                                <field name="qty"/>
+                            </group>
+                        </group>
+                        <group>
+                            <separator string="Assets"/>
+                            <field name="asset_ids" options="{'no_create': True, 'no_edit': True}" nolabel="1" colspan="4"/>
+                        </group>
+                    </sheet>
+	            </form>
+	        </field>
+	    </record>
+
+	    <record model="ir.actions.act_window" id="act_feosco_print_selection">
+	        <field name="name">In theo số lượng</field>
+	        <field name="type">ir.actions.act_window</field>
+	        <field name="res_model">feosco.print.selection</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">form</field>
+            <field name="target">new</field>
+	    </record>
+
+
+
+
+
+    </data>
+</openerp>

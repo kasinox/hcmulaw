@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<lots>
+    <lot-line type="fields" name="id">
+        <code type="field" name="feosco_code"/>
+        <product type="field" name="name"/>
+        <ref type="field" name="code"/>
+        <ean13 type="field" name="feosco_code"/>
+        <currency type="field" name="company_id.currency_id.name"/>
+    </lot-line>
+</lots>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="report_department">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="report.external_layout">
+                        <div class="page">
+                            <h3>
+                            <div class="text-center">Tài Sản <span t-field="o.code"/>-<span t-field="o.name"/></div>
+                            </h3>
+                            <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th><strong>    Số lượng hiện có: <span t-field="o.sum"/></strong></th>
+                                </tr>
+                            </thead>
+                            </table>
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th><strong>STT</strong></th>
+                                        <th><strong>Mã</strong></th>
+                                        <th><strong>Tên</strong></th>
+                                        <th><strong>Đơn vị</strong></th>
+                                        <th><strong>Năm sử dụng</strong></th>
+	                                    <th><strong>SL</strong></th>
+	                                    <th><strong>NV sử dụng</strong></th>
+	                                    <th><strong>Giá</strong></th>
+                                    </tr>
+                                </thead>
+                                <tr t-foreach="o.asset_ids" t-as="asset">
+                                    <td><span t-field="asset.feosco_num"/></td>
+                                    <td><span t-field="asset.code"/></td>
+                                    <td><span t-field="asset.name"/></td>
+	                                <td><span t-field="asset.feosco_uom_id.name"/></td>
+                                    <td><span t-field="asset.feosco_purchase_year_id.code"/></td>
+	                                <td><span t-field="asset.feosco_qty"/></td>
+	                                <td><span t-field="asset.feosco_user_id.name"/></td>
+                                    <td><span t-field="asset.purchase_value"/></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                </tr>
+                            </table>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th><strong>Ban giám hiệu</strong></th>
+                                        <th><strong>Phòng QT Thiết bị</strong></th>
+	                                    <th><strong>Đơn vị sử dụng</strong></th>
+                                        <th><strong>Tổ kiểm kê</strong></th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </t>
+                 </t>
+             </t>
+        </template>
+    </data>
+</openerp>

@@ -1,0 +1,1190 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* feosco_account_asset
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-24 15:18+0000\n"
+"PO-Revision-Date: 2014-11-24 22:24+0800\n"
+"Last-Translator: Bruce Nguyen <thanhchatvn@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:129
+#: code:addons/feosco_account_asset/model/asset_public_key.py:129
+#, python-format
+msgid "%s"
+msgstr "%s"
+
+#. module: feosco_account_asset
+#: field:feosco.key,account_num:0
+msgid "Account No"
+msgstr "Tài khoản số"
+
+#. module: feosco_account_asset
+#: field:feosco.asset.history,action:0 field:feosco.export.import,action:0
+#: view:feosco.wizard.asset.assign:feosco_account_asset.feosco_wizard_asset_assign_form
+msgid "Action"
+msgstr "Hành động"
+
+#. module: feosco_account_asset
+#: field:feosco.barcode.type,active:0 field:feosco.scan.time,active_scan:0
+msgid "Active"
+msgstr "Hiệu lực"
+
+#. module: feosco_account_asset
+#: selection:feosco.export.import,output_type:0
+msgid "All"
+msgstr "Tất cả"
+
+#. module: feosco_account_asset
+#: view:feosco.asset.print.all:feosco_account_asset.feosco_account_asset_print_all_form_view
+#: view:feosco.wizard.asset.assign:feosco_account_asset.feosco_wizard_asset_assign_form
+msgid "Are you sure?"
+msgstr "Bạn chắc chắn không ?"
+
+#. module: feosco_account_asset
+#: field:feosco.asset.history,asset_id:0 field:feosco.asset.scan,asset_id:0
+#: view:feosco.asset.status:feosco_account_asset.view_feosco_asset_status_form
+#: view:feosco.asset.status:feosco_account_asset.view_feosco_asset_status_search
+#: field:feosco.print.asset,asset_id:0
+#: model:ir.model,name:feosco_account_asset.model_account_asset_asset
+msgid "Asset"
+msgstr "Tài sản"
+
+#. module: feosco_account_asset
+#: model:ir.ui.menu,name:feosco_account_asset.menu_feosco_asset_root
+msgid "Asset List"
+msgstr "Danh sách tài sản"
+
+#. module: feosco_account_asset
+#: model:ir.ui.menu,name:feosco_account_asset.menu_feosco_root
+msgid "Asset Management"
+msgstr "Tài sản"
+
+#. module: feosco_account_asset
+#: model:ir.actions.act_window,name:feosco_account_asset.action_open_view_feosco_asset_status
+#: model:ir.ui.menu,name:feosco_account_asset.menu_action_open_view_feosco_asset_status
+msgid "Asset Status"
+msgstr "Trạng thái tài sản dùng kiểm kê"
+
+#. module: feosco_account_asset
+#: model:ir.model,name:feosco_account_asset.model_feosco_asset_status
+msgid "Asset Status Management"
+msgstr "Quản lý trạng thái tài sản"
+
+#. module: feosco_account_asset
+#: model:ir.model,name:feosco_account_asset.model_account_asset_category
+msgid "Asset category"
+msgstr "Danh mục"
+
+#. module: feosco_account_asset
+#: view:feosco.print.selection:feosco_account_asset.feosco_print_selection
+#: field:feosco.print.selection,asset_ids:0
+#: model:ir.ui.menu,name:feosco_account_asset.feosco_menu_action_account_asset_asset_form
+msgid "Assets"
+msgstr "Tài sản"
+
+#. module: feosco_account_asset
+#: view:feosco.asset.status:feosco_account_asset.view_feosco_asset_status_tree
+msgid "Assets Status"
+msgstr "Trạng thái"
+
+#. module: feosco_account_asset
+#: view:feosco.wizard.asset.assign:feosco_account_asset.feosco_wizard_asset_assign_form
+#: model:ir.actions.act_window,name:feosco_account_asset.action_feosco_wizard_asset_assign
+#: model:ir.actions.act_window,name:feosco_account_asset.multi_action_feosco_wizard_asset_assign
+msgid "Assign Asset"
+msgstr "Bàn giao tài sản"
+
+#. module: feosco_account_asset
+#: view:feosco.wizard.asset.assign:feosco_account_asset.feosco_wizard_asset_assign_form
+msgid "Assign to User"
+msgstr "Gán cho"
+
+#. module: feosco_account_asset
+#: view:account.asset.asset:feosco_account_asset.feosco_view_account_asset_asset_form
+msgid "Assigned Histories"
+msgstr "Lịch sử bàn giao"
+
+#. module: feosco_account_asset
+#: field:feosco.export.import,barcode_type_id:0
+msgid "Barcode"
+msgstr "Mã vạch"
+
+#. module: feosco_account_asset
+#: field:account.asset.asset,feosco_barcode_type:0
+#: view:feosco.barcode.type:feosco_account_asset.view_feosco_barcode_type_form
+#: view:feosco.barcode.type:feosco_account_asset.view_feosco_barcode_type_tree
+#: model:ir.model,name:feosco_account_asset.model_feosco_barcode_type
+msgid "Barcode Type"
+msgstr "Loại mã vạch"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset_barcode_type.py:46
+#: code:addons/feosco_account_asset/model/asset_barcode_type.py:46
+#, python-format
+msgid "Barcode Type can not be deleted. Please deactivate it. "
+msgstr "Mã vạch không thể bị xóa, vui lòng ngừng kích hoạt thay vì xóa"
+
+#. module: feosco_account_asset
+#: model:ir.actions.act_window,name:feosco_account_asset.action_feosco_barcode_type
+#: model:ir.ui.menu,name:feosco_account_asset.menu_feosco_barcode_type
+msgid "Barcodes"
+msgstr "Mã vạch"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset_barcode.py:53
+#: code:addons/feosco_account_asset/model/asset_barcode.py:53
+#, python-format
+msgid "Can not delete this"
+msgstr "Không thể xóa"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:145
+#: code:addons/feosco_account_asset/model/asset_public_key.py:145
+#, python-format
+msgid "Can not find licence register"
+msgstr "Không tìm thấy licence đăng ký"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset.py:43
+#: code:addons/feosco_account_asset/model/asset.py:43
+#, python-format
+msgid ""
+"Can not input data with Purchase Value is 0 or can not find Purchase Value "
+"your input this Form"
+msgstr "Giá mua về tài sản không thể mang giá trị 0"
+
+#. module: feosco_account_asset
+#: view:feosco.asset.print.all:feosco_account_asset.feosco_account_asset_print_all_form_view
+#: view:feosco.export.import:feosco_account_asset.view_feosco_export_import
+#: view:feosco.print.selection:feosco_account_asset.feosco_print_selection
+#: view:feosco.wizard.asset.assign:feosco_account_asset.feosco_wizard_asset_assign_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: feosco_account_asset
+#: model:ir.ui.menu,name:feosco_account_asset.feosco_menu_action_account_asset_asset_list_normal
+msgid "Categories"
+msgstr "Danh mục"
+
+#. module: feosco_account_asset
+#: view:account.asset.category:feosco_account_asset.feosco_view_account_asset_category_form
+#: field:account.asset.category,feosco_child_ids:0
+msgid "Childs"
+msgstr "Danh mục trực thuộc"
+
+#. module: feosco_account_asset
+#: view:account.asset.asset:feosco_account_asset.feosco_view_account_asset_search
+msgid "Chu kỳ kiểm kê"
+msgstr "Kỳ kiểm kê"
+
+#. module: feosco_account_asset
+#: view:feosco.move.department:feosco_account_asset.view_move_department
+msgid "Chuyển"
+msgstr "Chuyển"
+
+#. module: feosco_account_asset
+#: field:account.asset.asset,feosco_code:0
+#: field:feosco.asset.gross.from,code:0 field:feosco.asset.type,code:0
+#: field:feosco.barcode.type,code:0 field:feosco.purchase.year,code:0
+msgid "Code"
+msgstr "Mã"
+
+#. module: feosco_account_asset
+#: field:feosco.asset.department,company_id:0
+#: field:feosco.print.asset,company_id:0
+msgid "Company"
+msgstr "Công ty"
+
+#. module: feosco_account_asset
+#: view:account.asset.asset:feosco_account_asset.feosco_view_account_asset_asset_form
+msgid "Compute"
+msgstr "Tính toán"
+
+#. module: feosco_account_asset
+#: field:feosco.export.import,output_type:0
+msgid "Condition"
+msgstr "Điều kiện"
+
+#. module: feosco_account_asset
+#: model:ir.ui.menu,name:feosco_account_asset.menu_feosco_asset_config
+msgid "Configuration"
+msgstr "Cấu hình"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset_barcode.py:22
+#: code:addons/asset/feosco_account_asset/model/asset_barcode.py:45
+#: code:addons/asset/feosco_account_asset/model/asset_barcode.py:66
+#: code:addons/asset/feosco_account_asset/model/asset_barcode.py:89
+#: code:addons/feosco_account_asset/model/asset_barcode.py:22
+#: code:addons/feosco_account_asset/model/asset_barcode.py:45
+#: code:addons/feosco_account_asset/model/asset_barcode.py:66
+#: code:addons/feosco_account_asset/model/asset_barcode.py:89
+#, python-format
+msgid "Configuration Error!"
+msgstr "Cấu hình sai !"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset.py:86
+#: code:addons/feosco_account_asset/model/asset.py:86
+#, python-format
+msgid "Contact admin default Asset Type"
+msgstr "Contact admin default Asset Type"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset.py:74
+#: code:addons/feosco_account_asset/model/asset.py:74
+#, python-format
+msgid "Contact admin default Gross from"
+msgstr "Contact admin default Gross from"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset.py:80
+#: code:addons/feosco_account_asset/model/asset.py:80
+#, python-format
+msgid "Contact admin default Purchase Year"
+msgstr "Contact admin default Purchase Year"
+
+#. module: feosco_account_asset
+#: view:account.asset.asset:feosco_account_asset.feosco_view_account_asset_asset_form
+msgid "Create Move"
+msgstr "Tạo luân chuyển"
+
+#. module: feosco_account_asset
+#: field:feosco.asset.history,create_uid:0
+msgid "Create by"
+msgstr "Thực hiện bởi"
+
+#. module: feosco_account_asset
+#: field:feosco.asset.history,create_date:0
+#: field:feosco.print.asset,create_date:0
+msgid "Create on"
+msgstr "Thực hiện vào"
+
+#. module: feosco_account_asset
+#: field:feosco.asset.department,create_uid:0
+#: field:feosco.asset.gross.from,create_uid:0
+#: field:feosco.asset.print.all,create_uid:0
+#: field:feosco.asset.scan,create_uid:0 field:feosco.asset.status,create_uid:0
+#: field:feosco.asset.type,create_uid:0 field:feosco.barcode.type,create_uid:0
+#: field:feosco.excel,create_uid:0 field:feosco.export.import,create_uid:0
+#: field:feosco.key,create_uid:0 field:feosco.move.department,create_uid:0
+#: field:feosco.print.selection,create_uid:0
+#: field:feosco.purchase.year,create_uid:0 field:feosco.scan.time,create_uid:0
+#: field:feosco.wizard.asset.assign,create_uid:0
+#: field:interface.response,create_uid:0
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: feosco_account_asset
+#: field:feosco.asset.department,create_date:0
+#: field:feosco.asset.gross.from,create_date:0
+#: field:feosco.asset.print.all,create_date:0
+#: field:feosco.asset.status,create_date:0
+#: field:feosco.asset.type,create_date:0
+#: field:feosco.barcode.type,create_date:0 field:feosco.excel,create_date:0
+#: field:feosco.export.import,create_date:0 field:feosco.key,create_date:0
+#: field:feosco.move.department,create_date:0
+#: field:feosco.print.selection,create_date:0
+#: field:feosco.purchase.year,create_date:0
+#: field:feosco.scan.time,create_date:0
+#: field:feosco.wizard.asset.assign,create_date:0
+#: field:interface.response,create_date:0
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: feosco_account_asset
+#: field:feosco.key,name:0
+msgid "Customer name"
+msgstr "Tên khách hàng"
+
+#. module: feosco_account_asset
+#: selection:feosco.asset.print.all,print_type:0
+#: selection:feosco.print.selection,print_type:0
+msgid "Cut"
+msgstr "Cắt từng đoạn"
+
+#. module: feosco_account_asset
+#: view:feosco.scan.time:feosco_account_asset.view_feosco_scan_time_form
+msgid "Cấu hình chu kì kiểm kê"
+msgstr "Cấu hình kỳ kiểm kê"
+
+#. module: feosco_account_asset
+#: model:ir.actions.act_window,name:feosco_account_asset.action_view_feosco_export_import
+msgid "Datas"
+msgstr "Dữ liệu"
+
+#. module: feosco_account_asset
+#: help:feosco.asset.gross.from,default:0 help:feosco.asset.type,default:0
+#: help:feosco.purchase.year,default:0
+msgid "Defaul for Asset"
+msgstr "Dùng làm mặc định"
+
+#. module: feosco_account_asset
+#: field:feosco.asset.gross.from,default:0 field:feosco.asset.type,default:0
+#: field:feosco.purchase.year,default:0
+msgid "Default"
+msgstr "Mặc định"
+
+#. module: feosco_account_asset
+#: field:account.asset.asset,feosco_asset_department_id:0
+#: field:feosco.move.department,department_id:0
+msgid "Department"
+msgstr "Phòng"
+
+#. module: feosco_account_asset
+#: field:feosco.asset.department,name:0
+msgid "Department Name"
+msgstr "Tên phòng"
+
+#. module: feosco_account_asset
+#: field:feosco.asset.department,parent_id:0
+msgid "Department Parent"
+msgstr "Thuộc phòng"
+
+#. module: feosco_account_asset
+#: model:ir.actions.act_window,name:feosco_account_asset.action_feosco_asset_department
+#: model:ir.ui.menu,name:feosco_account_asset.menu_action_feosco_asset_department
+msgid "Departments"
+msgstr "Phòng"
+
+#. module: feosco_account_asset
+#: field:account.asset.asset,feosco_depreciated:0
+msgid "Depreciated (%)"
+msgstr "Đã hao mòn %"
+
+#. module: feosco_account_asset
+#: view:account.asset.asset:feosco_account_asset.feosco_view_account_asset_asset_form
+msgid "Depreciation Board"
+msgstr "Bảng hao mòn"
+
+#. module: feosco_account_asset
+#: view:account.asset.asset:feosco_account_asset.feosco_view_account_asset_asset_form
+msgid "Depreciation Boards"
+msgstr "Bảng hao mòn theo kỳ"
+
+#. module: feosco_account_asset
+#: view:account.asset.category:feosco_account_asset.feosco_view_account_asset_category_form
+msgid "Depreciation Dates"
+msgstr "Kỳ"
+
+#. module: feosco_account_asset
+#: view:account.asset.category:feosco_account_asset.feosco_view_account_asset_category_form
+msgid "Depreciation Method"
+msgstr "Phương pháp tính hao mòn"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:56
+#: code:addons/feosco_account_asset/model/asset_public_key.py:56
+#, python-format
+msgid "Email have been register"
+msgstr "Mail đã được đăng ký"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:191
+#: code:addons/feosco_account_asset/model/asset_public_key.py:191
+#, python-format
+msgid "Email have register"
+msgstr "Mail có đăng ký trước đó"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:51
+#: code:addons/feosco_account_asset/model/asset_public_key.py:51
+#, python-format
+msgid "Email not valid"
+msgstr "Mail không hợp lệ"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset.py:43
+#: code:addons/asset/feosco_account_asset/model/asset.py:64
+#: code:addons/asset/feosco_account_asset/model/asset.py:74
+#: code:addons/asset/feosco_account_asset/model/asset.py:80
+#: code:addons/asset/feosco_account_asset/model/asset.py:86
+#: code:addons/asset/feosco_account_asset/model/asset.py:227
+#: code:addons/asset/feosco_account_asset/model/asset.py:231
+#: code:addons/asset/feosco_account_asset/model/asset_barcode.py:53
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:45
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:51
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:56
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:78
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:86
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:88
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:106
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:113
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:129
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:145
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:152
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:173
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:191
+#: code:addons/asset/feosco_account_asset/model/asset_scan_time.py:40
+#: code:addons/asset/feosco_account_asset/model/asset_scan_time.py:42
+#: code:addons/feosco_account_asset/model/asset.py:43
+#: code:addons/feosco_account_asset/model/asset.py:64
+#: code:addons/feosco_account_asset/model/asset.py:74
+#: code:addons/feosco_account_asset/model/asset.py:80
+#: code:addons/feosco_account_asset/model/asset.py:86
+#: code:addons/feosco_account_asset/model/asset.py:227
+#: code:addons/feosco_account_asset/model/asset.py:231
+#: code:addons/feosco_account_asset/model/asset_barcode.py:53
+#: code:addons/feosco_account_asset/model/asset_public_key.py:45
+#: code:addons/feosco_account_asset/model/asset_public_key.py:51
+#: code:addons/feosco_account_asset/model/asset_public_key.py:56
+#: code:addons/feosco_account_asset/model/asset_public_key.py:78
+#: code:addons/feosco_account_asset/model/asset_public_key.py:86
+#: code:addons/feosco_account_asset/model/asset_public_key.py:88
+#: code:addons/feosco_account_asset/model/asset_public_key.py:106
+#: code:addons/feosco_account_asset/model/asset_public_key.py:113
+#: code:addons/feosco_account_asset/model/asset_public_key.py:129
+#: code:addons/feosco_account_asset/model/asset_public_key.py:145
+#: code:addons/feosco_account_asset/model/asset_public_key.py:152
+#: code:addons/feosco_account_asset/model/asset_public_key.py:173
+#: code:addons/feosco_account_asset/model/asset_public_key.py:191
+#: code:addons/feosco_account_asset/model/asset_scan_time.py:40
+#: code:addons/feosco_account_asset/model/asset_scan_time.py:42
+#, python-format
+msgid "Error"
+msgstr "Lổi"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset_barcode_type.py:46
+#: code:addons/feosco_account_asset/model/asset_barcode_type.py:46
+#, python-format
+msgid "Error !"
+msgstr "Lổi !"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/wizard_local/feosco_wizard_asset_assign.py:18
+#: code:addons/asset/feosco_account_asset/wizard_local/feosco_wizard_asset_assign.py:52
+#: code:addons/feosco_account_asset/wizard_local/feosco_wizard_asset_assign.py:18
+#: code:addons/feosco_account_asset/wizard_local/feosco_wizard_asset_assign.py:52
+#, python-format
+msgid "Error, can not find Employee Assign"
+msgstr "Lổi, không tìm thấy người bàn giao !"
+
+#. module: feosco_account_asset
+#: selection:feosco.export.import,action:0
+msgid "Export"
+msgstr "Xuất"
+
+#. module: feosco_account_asset
+#: field:feosco.export.import,file:0
+msgid "File"
+msgstr "Tập tin"
+
+#. module: feosco_account_asset
+#: selection:feosco.export.import,state:0
+msgid "Finish"
+msgstr "Hoàn tất"
+
+#. module: feosco_account_asset
+#: field:feosco.export.import,excel_format:0
+msgid "Format"
+msgstr "Định dạng"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset_scan_time.py:40
+#: code:addons/asset/feosco_account_asset/model/asset_scan_time.py:42
+#: code:addons/feosco_account_asset/model/asset_scan_time.py:40
+#: code:addons/feosco_account_asset/model/asset_scan_time.py:42
+#, python-format
+msgid "From and to date is not equal %s"
+msgstr "Từ ngày và đến ngày không nằm trong khoảng %s"
+
+#. module: feosco_account_asset
+#: field:feosco.scan.time,dt_from:0
+msgid "From date"
+msgstr "Từ ngày"
+
+#. module: feosco_account_asset
+#: view:feosco.asset.gross.from:feosco_account_asset.form_feosco_asset_gross_from
+#: view:feosco.asset.gross.from:feosco_account_asset.tree_feosco_asset_gross_from
+#: model:ir.actions.act_window,name:feosco_account_asset.action_feosco_asset_gross_from
+#: model:ir.ui.menu,name:feosco_account_asset.menu_action_feosco_asset_gross_from
+msgid "Gross From"
+msgstr "Ngân sách từ"
+
+#. module: feosco_account_asset
+#: field:account.asset.asset,feosco_asset_gross_from_id:0
+msgid "Gross from"
+msgstr "Ngân sách từ"
+
+#. module: feosco_account_asset
+#: view:account.asset.category:feosco_account_asset.feosco_view_account_asset_category_search
+msgid "Group By"
+msgstr "Nhóm bởi"
+
+#. module: feosco_account_asset
+#: view:account.asset.category:feosco_account_asset.feosco_view_account_asset_category_search
+msgid "Groups"
+msgstr "Nhóm"
+
+#. module: feosco_account_asset
+#: field:account.asset.asset,feosco_history_ids:0
+msgid "History"
+msgstr "Lịch sử"
+
+#. module: feosco_account_asset
+#: view:feosco.asset.scan:feosco_account_asset.feosco_asset_scan_form
+msgid "Hình ảnh được cập nhật"
+msgstr "Hình ảnh được cập nhật"
+
+#. module: feosco_account_asset
+#: field:ean13,id:0 field:ean8,id:0 field:feosco.asset.department,id:0
+#: field:feosco.asset.gross.from,id:0 field:feosco.asset.history,id:0
+#: field:feosco.asset.print.all,id:0 field:feosco.asset.scan,id:0
+#: field:feosco.asset.status,id:0 field:feosco.asset.type,id:0
+#: field:feosco.barcode.type,id:0 field:feosco.excel,id:0
+#: field:feosco.export.import,id:0 field:feosco.key,id:0
+#: field:feosco.move.department,id:0 field:feosco.print.asset,id:0
+#: field:feosco.print.selection,id:0 field:feosco.purchase.year,id:0
+#: field:feosco.scan.time,id:0 field:feosco.wizard.asset.assign,id:0
+#: field:interface.response,id:0
+msgid "ID"
+msgstr "Mã ID"
+
+#. module: feosco_account_asset
+#: help:feosco.wizard.asset.assign,public:0
+msgid "If asset have not owner, but this asset use for all."
+msgstr ""
+"Nếu đây là tài sản sử dụng chung cho tất cả hoặc 1 nhóm người dùng, vui lòng "
+"chọn vào đây"
+
+#. module: feosco_account_asset
+#: field:account.asset.asset,feosco_image:0 field:feosco.asset.scan,image:0
+msgid "Image"
+msgstr "Hình ảnh"
+
+#. module: feosco_account_asset
+#: field:account.asset.asset,feosco_image_his:0
+msgid "Image old"
+msgstr "Hình cũ"
+
+#. module: feosco_account_asset
+#: selection:feosco.export.import,action:0
+msgid "Import"
+msgstr "Nhập"
+
+#. module: feosco_account_asset
+#: model:ir.ui.menu,name:feosco_account_asset.menu_feosco_asset_import
+msgid "In Out Data"
+msgstr "Nhập xuất dữ liệu"
+
+#. module: feosco_account_asset
+#: view:feosco.export.import:feosco_account_asset.view_feosco_export_import
+msgid "In Out data"
+msgstr "Nhập xuất dữ liệu"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:113
+#: code:addons/feosco_account_asset/model/asset_public_key.py:113
+#, python-format
+msgid "Internet Error"
+msgstr "Đường truyền dữ liệu lổi"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:152
+#: code:addons/feosco_account_asset/model/asset_public_key.py:152
+#, python-format
+msgid "Internet error"
+msgstr "Đường truyền dữ liệu lổi"
+
+#. module: feosco_account_asset
+#: selection:feosco.export.import,output_type:0
+msgid "Inventoried"
+msgstr "Đã kiểm kê"
+
+#. module: feosco_account_asset
+#: model:ir.ui.menu,name:feosco_account_asset.menu_feosco_asset_scan
+msgid "Inventory"
+msgstr "Kiểm kê"
+
+#. module: feosco_account_asset
+#: view:feosco.key:feosco_account_asset.feosco_key_form
+msgid "Kích hoạt dịch vụ"
+msgstr "Kích hoạt"
+
+#. module: feosco_account_asset
+#: field:feosco.asset.department,write_uid:0
+#: field:feosco.asset.gross.from,write_uid:0
+#: field:feosco.asset.history,write_uid:0
+#: field:feosco.asset.print.all,write_uid:0
+#: field:feosco.asset.scan,write_uid:0 field:feosco.asset.status,write_uid:0
+#: field:feosco.asset.type,write_uid:0 field:feosco.barcode.type,write_uid:0
+#: field:feosco.excel,write_uid:0 field:feosco.export.import,write_uid:0
+#: field:feosco.key,write_uid:0 field:feosco.move.department,write_uid:0
+#: field:feosco.print.asset,write_uid:0
+#: field:feosco.print.selection,write_uid:0
+#: field:feosco.purchase.year,write_uid:0 field:feosco.scan.time,write_uid:0
+#: field:feosco.wizard.asset.assign,write_uid:0
+#: field:interface.response,write_uid:0
+msgid "Last Updated by"
+msgstr "Cập nhật cuối bởi"
+
+#. module: feosco_account_asset
+#: field:feosco.asset.department,write_date:0
+#: field:feosco.asset.gross.from,write_date:0
+#: field:feosco.asset.history,write_date:0
+#: field:feosco.asset.print.all,write_date:0
+#: field:feosco.asset.scan,write_date:0 field:feosco.asset.status,write_date:0
+#: field:feosco.asset.type,write_date:0 field:feosco.barcode.type,write_date:0
+#: field:feosco.excel,write_date:0 field:feosco.export.import,write_date:0
+#: field:feosco.key,write_date:0 field:feosco.move.department,write_date:0
+#: field:feosco.print.asset,write_date:0
+#: field:feosco.print.selection,write_date:0
+#: field:feosco.purchase.year,write_date:0 field:feosco.scan.time,write_date:0
+#: field:feosco.wizard.asset.assign,write_date:0
+#: field:interface.response,write_date:0
+msgid "Last Updated on"
+msgstr "Cập nhật cuối vào"
+
+#. module: feosco_account_asset
+#: field:feosco.asset.department,limit:0
+msgid "Limit"
+msgstr "Sức chứa"
+
+#. module: feosco_account_asset
+#: field:account.asset.asset,feosco_location:0
+msgid "Location Use"
+msgstr "Vị trí sử dụng"
+
+#. module: feosco_account_asset
+#: field:account.asset.asset,feosco_stock_id:0
+msgid "Location Warehouse"
+msgstr "Đang ở kho"
+
+#. module: feosco_account_asset
+#: model:ir.ui.menu,name:feosco_account_asset.feosco_menu_action_location_form
+msgid "Locations"
+msgstr "Địa điểm"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/wizard_local/export_import.py:219
+#: code:addons/feosco_account_asset/wizard_local/export_import.py:219
+#, python-format
+msgid "Lổi file"
+msgstr "Lổi tập tin"
+
+#. module: feosco_account_asset
+#: field:feosco.key,mail:0
+msgid "Mail"
+msgstr "Thư điện tử"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset.py:64
+#: code:addons/feosco_account_asset/model/asset.py:64
+#, python-format
+msgid "Missing QR code type in system"
+msgstr "Mất kiểu định dạng QR code trong hệ thống"
+
+#. module: feosco_account_asset
+#: field:feosco.key,phone:0
+msgid "Mobile"
+msgstr "Di động"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:45
+#: code:addons/feosco_account_asset/model/asset_public_key.py:45
+#, python-format
+msgid "Mobile not valid"
+msgstr "Số đi động không hợp lệ"
+
+#. module: feosco_account_asset
+#: view:feosco.move.department:feosco_account_asset.view_move_department
+#: model:ir.actions.act_window,name:feosco_account_asset.act_windown_view_move_department
+msgid "Move Department"
+msgstr "Chuyển phòng"
+
+#. module: feosco_account_asset
+#: field:feosco.asset.scan,name:0 field:feosco.barcode.type,name:0
+#: field:feosco.scan.time,name:0
+msgid "Name"
+msgstr "Tên"
+
+#. module: feosco_account_asset
+#: field:account.asset.asset,feosco_num:0
+msgid "No ."
+msgstr "Số"
+
+#. module: feosco_account_asset
+#: field:feosco.asset.gross.from,name:0 field:feosco.asset.type,name:0
+#: field:feosco.purchase.year,name:0
+msgid "No."
+msgstr "Số"
+
+#. module: feosco_account_asset
+#: selection:feosco.print.asset,print_type:0
+msgid "Not Slip"
+msgstr "In liền"
+
+#. module: feosco_account_asset
+#: selection:feosco.export.import,state:0
+msgid "Not action"
+msgstr "Chưa thực thi"
+
+#. module: feosco_account_asset
+#: selection:feosco.asset.print.all,print_type:0
+#: selection:feosco.print.selection,print_type:0
+msgid "Not cut"
+msgstr "Không cắt"
+
+#. module: feosco_account_asset
+#: selection:feosco.export.import,output_type:0
+msgid "Not inventoried"
+msgstr "Chưa kiểm kê"
+
+#. module: feosco_account_asset
+#: selection:feosco.print.selection,state:0
+msgid "Not print"
+msgstr "Chưa in"
+
+#. module: feosco_account_asset
+#: selection:feosco.key,state:0
+msgid "Not register"
+msgstr "Chưa đăng ký"
+
+#. module: feosco_account_asset
+#: field:feosco.asset.scan,note:0
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: feosco_account_asset
+#: view:feosco.asset.department:feosco_account_asset.view_feosco_asset_department_form
+#: field:feosco.asset.department,note:0
+msgid "Notes"
+msgstr "Các ghi chú"
+
+#. module: feosco_account_asset
+#: view:feosco.export.import:feosco_account_asset.view_feosco_export_import
+msgid "Out"
+msgstr "Xuất"
+
+#. module: feosco_account_asset
+#: field:account.asset.category,feosco_parent_id:0
+msgid "Parent"
+msgstr "Thuộc nhóm"
+
+#. module: feosco_account_asset
+#: field:feosco.export.import,path_image:0
+msgid "Path Image Folder"
+msgstr "Thư mục chứa hình"
+
+#. module: feosco_account_asset
+#: field:feosco.key,path_key:0
+msgid "Path Key"
+msgstr "Đường dẫn khóa"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset.py:231
+#: code:addons/feosco_account_asset/model/asset.py:231
+#, python-format
+msgid "Percent (%) can not 0"
+msgstr "Giá trị phần trăm hao mòn không thể là 0"
+
+#. module: feosco_account_asset
+#: field:account.asset.asset,feosco_percent:0
+#: field:account.asset.category,feosco_percent:0
+msgid "Percent (%) of year"
+msgstr "Phần trăm (%)/ năm"
+
+#. module: feosco_account_asset
+#: field:feosco.export.import,scan_time_id:0
+msgid "Periodic"
+msgstr "Định kỳ"
+
+#. module: feosco_account_asset
+#: field:feosco.asset.department,phone:0
+msgid "Phone"
+msgstr "Số liên lạc nội bộ"
+
+#. module: feosco_account_asset
+#: view:account.asset.asset:feosco_account_asset.feosco_view_account_asset_search
+msgid "Phòng Ban"
+msgstr "Phòng"
+
+#. module: feosco_account_asset
+#: view:feosco.asset.department:feosco_account_asset.view_feosco_asset_department_form
+#: view:feosco.asset.department:feosco_account_asset.view_feosco_asset_department_tree
+msgid "Phòng ban"
+msgstr "Phòng"
+
+#. module: feosco_account_asset
+#: view:feosco.export.import:feosco_account_asset.view_feosco_export_import
+msgid "Please attach file"
+msgstr "Đính kèm tập tin"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:173
+#: code:addons/feosco_account_asset/model/asset_public_key.py:173
+#, python-format
+msgid "Please check your internet connection"
+msgstr "Vui lòng kiểm tra kết nối "
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:78
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:86
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:88
+#: code:addons/feosco_account_asset/model/asset_public_key.py:78
+#: code:addons/feosco_account_asset/model/asset_public_key.py:86
+#: code:addons/feosco_account_asset/model/asset_public_key.py:88
+#, python-format
+msgid "Please do not crack me"
+msgstr "Vui lòng không crack hệ thống"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset_public_key.py:106
+#: code:addons/feosco_account_asset/model/asset_public_key.py:106
+#, python-format
+msgid "Please reinput register code"
+msgstr "Please reinput register code"
+
+#. module: feosco_account_asset
+#: field:account.asset.asset,feosco_print:0
+msgid "Print"
+msgstr "In"
+
+#. module: feosco_account_asset
+#: model:ir.actions.act_window,name:feosco_account_asset.act_feosco_print_selection
+msgid "Print Label"
+msgstr "In nhãn"
+
+#. module: feosco_account_asset
+#: field:feosco.print.asset,print_type:0
+msgid "Print Type"
+msgstr "Kiểu in"
+
+#. module: feosco_account_asset
+#: selection:feosco.print.selection,state:0
+msgid "Printed"
+msgstr "Đã in"
+
+#. module: feosco_account_asset
+#: view:feosco.print.selection:feosco_account_asset.feosco_print_selection
+msgid "Printer"
+msgstr "Máy in"
+
+#. module: feosco_account_asset
+#: model:ir.actions.act_window,name:feosco_account_asset.action_feosco_account_asset_print_all
+#: model:ir.actions.act_window,name:feosco_account_asset.action_print_label
+msgid "Printer Barcode"
+msgstr "In nhãn tài sản"
+
+#. module: feosco_account_asset
+#: view:feosco.asset.print.all:feosco_account_asset.feosco_account_asset_print_all_form_view
+#: view:feosco.print.selection:feosco_account_asset.feosco_print_selection
+msgid "Printing"
+msgstr "Đang in"
+
+#. module: feosco_account_asset
+#: field:feosco.wizard.asset.assign,public:0
+msgid "Public Asset"
+msgstr "Tài sản chung"
+
+#. module: feosco_account_asset
+#: field:account.asset.asset,feosco_purchase_year_id:0
+#: view:feosco.purchase.year:feosco_account_asset.form_feosco_purchase_year
+#: view:feosco.purchase.year:feosco_account_asset.tree_feosco_purchase_year
+#: model:ir.actions.act_window,name:feosco_account_asset.action_feosco_purchase_year
+#: model:ir.ui.menu,name:feosco_account_asset.menu_action_feosco_purchase_year
+msgid "Purchase Year"
+msgstr "Năm mua"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset.py:227
+#: code:addons/feosco_account_asset/model/asset.py:227
+#, python-format
+msgid "Purchase value can not 0"
+msgstr "Giá mua tài sản không thể là 0"
+
+#. module: feosco_account_asset
+#: field:account.asset.asset,feosco_barcode_image:0
+msgid "QR code"
+msgstr "Mã QR"
+
+#. module: feosco_account_asset
+#: field:account.asset.asset,feosco_qty:0
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: feosco_account_asset
+#: view:feosco.print.asset:feosco_account_asset.view_feosco_print_asset_form
+#: view:feosco.print.asset:feosco_account_asset.view_feosco_print_asset_search
+#: view:feosco.print.asset:feosco_account_asset.view_feosco_print_asset_tree
+#: model:ir.actions.act_window,name:feosco_account_asset.action_open_view_feosco_print_asset
+#: model:ir.ui.menu,name:feosco_account_asset.menu_action_open_view_feosco_print_asset
+msgid "Queue Printer"
+msgstr "Đợi in"
+
+#. module: feosco_account_asset
+#: field:feosco.asset.department,code:0
+msgid "Reference Code"
+msgstr "Mã tham chiếu"
+
+#. module: feosco_account_asset
+#: view:feosco.key:feosco_account_asset.feosco_key_form
+#: view:feosco.key:feosco_account_asset.feosco_key_tree
+#: field:feosco.key,contact:0
+#: model:ir.actions.act_window,name:feosco_account_asset.feosco_key_act
+#: model:ir.ui.menu,name:feosco_account_asset.menu_feosco_key_act
+msgid "Register"
+msgstr "Đăng ký"
+
+#. module: feosco_account_asset
+#: selection:feosco.key,state:0
+msgid "Register Succed"
+msgstr "Hoàn tất"
+
+#. module: feosco_account_asset
+#: field:feosco.key,key:0
+msgid "Register code"
+msgstr "Mã đăng ký"
+
+#. module: feosco_account_asset
+#: model:ir.ui.menu,name:feosco_account_asset.menu_register_key
+msgid "Registers"
+msgstr "Đăng ký"
+
+#. module: feosco_account_asset
+#: view:account.asset.asset:feosco_account_asset.feosco_view_account_asset_asset_form
+#: model:ir.actions.act_window,name:feosco_account_asset.feosco_asset_scan_act
+#: model:ir.ui.menu,name:feosco_account_asset.menu_feosco_asset_scan_act
+msgid "Scan Histories"
+msgstr "Lịch sử kiểm kê"
+
+#. module: feosco_account_asset
+#: field:feosco.asset.scan,create_date:0
+msgid "Scan on"
+msgstr "Kiểm kê vào"
+
+#. module: feosco_account_asset
+#: field:account.asset.asset,feosco_scan_time_id:0
+msgid "Scan schedule"
+msgstr "Lịch trình kiểm kê"
+
+#. module: feosco_account_asset
+#: field:account.asset.asset,feosco_scan_ids:0
+#: view:feosco.asset.scan:feosco_account_asset.feosco_asset_scan_form
+#: view:feosco.asset.scan:feosco_account_asset.feosco_asset_scan_tree
+msgid "Scans"
+msgstr "Kiểm kê"
+
+#. module: feosco_account_asset
+#: view:feosco.asset.scan:feosco_account_asset.feosco_asset_scan_search
+msgid "Scans filter"
+msgstr "Bộ lọc kiểm kê"
+
+#. module: feosco_account_asset
+#: view:feosco.scan.time:feosco_account_asset.view_feosco_scan_time_form
+#: view:feosco.scan.time:feosco_account_asset.view_feosco_scan_time_tree
+#: model:ir.actions.act_window,name:feosco_account_asset.action_feosco_scan_time
+#: model:ir.ui.menu,name:feosco_account_asset.menu_action_feosco_scan_time
+msgid "Schedule Inventory"
+msgstr "Chu kỳ kiểm kê"
+
+#. module: feosco_account_asset
+#: field:feosco.asset.scan,scan_time_id:0
+msgid "Schedule time"
+msgstr "Lịch trình"
+
+#. module: feosco_account_asset
+#: selection:feosco.print.asset,state:0
+msgid "Send Printer is succed"
+msgstr "Đã truyền dữ liệu sang máy in"
+
+#. module: feosco_account_asset
+#: field:feosco.key,sequence:0
+msgid "Seq"
+msgstr "Thứ tự"
+
+#. module: feosco_account_asset
+#: selection:feosco.print.asset,print_type:0
+msgid "Slip"
+msgstr "Cắt"
+
+#. module: feosco_account_asset
+#: field:feosco.export.import,state:0 field:feosco.print.asset,state:0
+#: field:feosco.print.selection,state:0
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: feosco_account_asset
+#: field:account.asset.asset,feosco_status_id:0
+#: field:feosco.asset.status,name:0
+msgid "Status"
+msgstr "Tình trạng"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset.py:55
+#: code:addons/feosco_account_asset/model/asset.py:55
+#, python-format
+msgid "Thao tác sai"
+msgstr "Thao tác sai"
+
+#. module: feosco_account_asset
+#: sql_constraint:feosco.asset.status:0
+msgid "The Status must be unique !"
+msgstr "Trạng thái phải là duy nhất!"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset_barcode.py:23
+#: code:addons/feosco_account_asset/model/asset_barcode.py:23
+#, python-format
+msgid ""
+"There next sequence is upper than 12 characters. This can't work.You will "
+"have to redefine the sequence or create a new one"
+msgstr ""
+"There next sequence is upper than 12 characters. This can't work.You will "
+"have to redefine the sequence or create a new one"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset_barcode.py:67
+#: code:addons/feosco_account_asset/model/asset_barcode.py:67
+#, python-format
+msgid ""
+"There next sequence is upper than 4 characters. This can't work.You will "
+"have to redefine the sequence or create a new one"
+msgstr ""
+"There next sequence is upper than 4 characters. This can't work.You will "
+"have to redefine the sequence or create a new one"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset_barcode.py:46
+#: code:addons/feosco_account_asset/model/asset_barcode.py:46
+#, python-format
+msgid ""
+"This sequence is different than 12 characters. This can't work.You will have "
+"to redefine the sequence or create a new one"
+msgstr ""
+"This sequence is different than 12 characters. This can't work.You will have "
+"to redefine the sequence or create a new one"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset_barcode.py:90
+#: code:addons/feosco_account_asset/model/asset_barcode.py:90
+#, python-format
+msgid ""
+"This sequence is different than 7 characters. This can't work.You will have "
+"to redefine the sequence or create a new one"
+msgstr ""
+"This sequence is different than 7 characters. This can't work.You will have "
+"to redefine the sequence or create a new one"
+
+#. module: feosco_account_asset
+#: field:feosco.scan.time,dt_to:0
+msgid "To date"
+msgstr "Đến ngày"
+
+#. module: feosco_account_asset
+#: field:account.asset.asset,feosco_asset_type_id:0
+#: field:feosco.asset.print.all,print_type:0
+#: view:feosco.asset.type:feosco_account_asset.form_feosco_asset_type
+#: view:feosco.asset.type:feosco_account_asset.tree_feosco_asset_type
+#: field:feosco.key,type:0
+#: view:feosco.print.selection:feosco_account_asset.feosco_print_selection
+#: field:feosco.print.selection,print_type:0
+#: model:ir.actions.act_window,name:feosco_account_asset.action_feosco_asset_type
+#: model:ir.ui.menu,name:feosco_account_asset.menu_action_feosco_asset_type
+msgid "Type"
+msgstr "Loại"
+
+#. module: feosco_account_asset
+#: view:feosco.key:feosco_account_asset.feosco_key_form
+msgid "Tái kích hoạt"
+msgstr "Tái kích hoạt"
+
+#. module: feosco_account_asset
+#: field:feosco.key,state:0
+msgid "Tình trạng đăng ký"
+msgstr "Trạng thái đăng ký"
+
+#. module: feosco_account_asset
+#: model:ir.ui.menu,name:feosco_account_asset.feosco_menu_product_uom_form_action
+msgid "Units of Measure"
+msgstr "Đơn vị đo"
+
+#. module: feosco_account_asset
+#: field:account.asset.asset,feosco_uom_id:0
+msgid "Uom"
+msgstr "Đơn vị"
+
+#. module: feosco_account_asset
+#: field:account.asset.asset,feosco_user_id:0
+#: field:feosco.asset.history,user_id:0
+#: field:feosco.wizard.asset.assign,user_id:0
+msgid "User"
+msgstr "Người dùng"
+
+#. module: feosco_account_asset
+#: field:feosco.print.asset,create_uid:0
+msgid "User Action"
+msgstr "Người yêu cầu"
+
+#. module: feosco_account_asset
+#: model:ir.ui.menu,name:feosco_account_asset.menu_feosco_asset_config_asset
+msgid "Variants"
+msgstr "Thuộc tính"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/model/asset.py:55
+#: code:addons/feosco_account_asset/model/asset.py:55
+#, python-format
+msgid ""
+"Vui lòng tạo 1 vài danh mục tài sản trước khi nhập dữ liệu, danh mục tài sản "
+"được dùng để khấu hao tài sản qua thời gian."
+msgstr ""
+"Vui lòng tạo 1 vài danh mục tài sản trước khi nhập dữ liệu, danh mục tài sản "
+"được dùng để khấu hao tài sản qua thời gian."
+
+#. module: feosco_account_asset
+#: selection:feosco.print.asset,state:0
+msgid "Waiting Printer Call"
+msgstr "Đợi máy in"
+
+#. module: feosco_account_asset
+#: field:feosco.key,website:0
+msgid "Website"
+msgstr "Trang tin"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/wizard_local/export_import.py:68
+#: code:addons/feosco_account_asset/wizard_local/export_import.py:68
+#, python-format
+msgid "Xuất dữ liệu thất bại"
+msgstr "Xuất dữ liệu thất bại"
+
+#. module: feosco_account_asset
+#: view:feosco.asset.print.all:feosco_account_asset.feosco_account_asset_print_all_form_view
+msgid "form_string"
+msgstr "form_string"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/wizard_local/export_import.py:68
+#: code:addons/feosco_account_asset/wizard_local/export_import.py:68
+#, python-format
+msgid "không tìm thấy tài sản nào ứng với điều kiện đưa vào."
+msgstr "không tìm thấy tài sản nào ứng với điều kiện đưa vào."
+
+#. module: feosco_account_asset
+#: view:feosco.key:feosco_account_asset.feosco_key_form
+msgid "Đăng ký"
+msgstr "Đăng ký"
+
+#. module: feosco_account_asset
+#: view:account.asset.asset:feosco_account_asset.feosco_view_account_asset_search
+msgid "Định dạng Barcode"
+msgstr "Định dạng mã vạch"
+
+#. module: feosco_account_asset
+#: code:addons/asset/feosco_account_asset/wizard_local/export_import.py:219
+#: code:addons/feosco_account_asset/wizard_local/export_import.py:219
+#, python-format
+msgid "Định dạng cột Ngày nhập về ko đúng, vui lòng kiểm tra lại mẫu import."
+msgstr "Định dạng cột Ngày nhập về ko đúng, vui lòng kiểm tra lại mẫu import."

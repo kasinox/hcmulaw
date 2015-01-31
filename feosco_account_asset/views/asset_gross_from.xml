@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+
+        <record model="ir.ui.view" id="form_feosco_asset_gross_from">
+            <field name="name">feosco.asset.gross.from.form</field>
+            <field name="model">feosco.asset.gross.from</field>
+            <field name="arch" type="xml">
+                <form string="Gross From">
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="default"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="tree_feosco_asset_gross_from">
+            <field name="name">feosco.asset.gross.from.tree</field>
+            <field name="model">feosco.asset.gross.from</field>
+            <field name="arch" type="xml">
+                <tree string="Gross From">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="default"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_feosco_asset_gross_from">
+            <field name="name">Gross From</field>
+            <field name="res_model">feosco.asset.gross.from</field>
+            <field name="view_type">form</field>
+            <field name="view_model">tree,form</field>
+        </record>
+
+        <menuitem parent="menu_feosco_asset_config"
+                  id="menu_action_feosco_asset_gross_from"
+                  action="action_feosco_asset_gross_from"
+                  sequence="100"/>
+
+    </data>
+</openerp>

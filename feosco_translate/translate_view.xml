@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="form_feosco_translate">
+            <field name="name">feosco.translate.form</field>
+            <field name="model">feosco.translate</field>
+            <field name="arch" type="xml">
+                <form string="Translate Vietnamsese">
+                    <button name="act_translate" string="Translate" type="object" class="oe_highlight"/>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_feosco_translate">
+            <field name="name">Translate</field>
+            <field name="res_model">feosco.translate</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+
+        <menuitem id="menu_form_feosco_translate"
+                  parent="base.menu_management"
+                  sequence="100"
+                  action="act_feosco_translate"/>
+
+    </data>
+</openerp>

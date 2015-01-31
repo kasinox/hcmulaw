@@ -1,0 +1,1 @@
+import feosco_asset_report

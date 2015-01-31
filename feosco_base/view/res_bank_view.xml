@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+        <record id="view_partner_bank_form_inherit" model="ir.ui.view">
+            <field name="name">res.partner.bank.form</field>
+            <field name="model">res.partner.bank</field>
+            <field name="inherit_id" ref="base.view_partner_bank_form"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='city']" position="replace">
+                    <field name="city_id"/>
+            		<field name="feosco_district_id" placeholder="District..." style="width: 40%%"/>
+            	</xpath>
+            	<xpath expr="//field[@name='zip']" position="replace"/>
+            	<xpath expr="//field[@name='state_id']" position="replace"/>
+            </field>
+        </record>
+        
+    </data>
+</openerp>
+

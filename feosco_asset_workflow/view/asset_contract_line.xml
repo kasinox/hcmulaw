@@ -1,0 +1,78 @@
+<openerp>
+	<data>
+
+		<record model="ir.ui.view" id="asset_contract_line">
+            <field name="name">asset.contract.line.form</field>
+            <field name="model">asset.contract.line</field>
+            <field name="arch" type="xml">
+                <form string="Contract Line">
+	                <sheet>
+		                <div class="oe_left">
+			                <label for="name" string="Name">
+				                <h2>
+					                <field name="name"/>
+				                </h2>
+			                </label>
+		                </div>
+						<group>
+							<group>
+								<field name="contract_id"/>
+                                <field name="total_time"/>
+								<field name="uom_id"/>
+							</group>
+							<group>
+								<field name="stock_id"/>
+								<field name="qty"/>
+								<field name="price"/>
+								<field name="discount"/>
+							</group>
+						</group>
+		                <field name="tax_ids" widget="many2many_tags"/>
+
+	                </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="asset_contract_line_tree">
+            <field name="name">asset.contract.line.tree</field>
+            <field name="model">asset.contract.line</field>
+            <field name="arch" type="xml">
+                <tree string="Contract Line" colors="grey: state == 'cancel'; blue: state in ('approved', 'done')">
+                    <field name="name"/>
+					<field name="contract_id"/>
+                    <field name="total_time"/>
+					<field name="uom_id"/>
+					<field name="stock_id"/>
+					<field name="qty"/>
+					<field name="price"/>
+					<field name="discount"/>
+                </tree>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="asset_contract_line_search">
+            <field name="name">asset.contract.line.tree</field>
+            <field name="model">asset.contract.line</field>
+            <field name="arch" type="xml">
+                <search string="Contract Lines">
+                    <field name="name"/>
+					<field name="contract_id"/>
+
+					<field name="uom_id"/>
+					<field name="stock_id"/>
+					<field name="qty"/>
+					<field name="price"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="asset_contract_line_action">
+            <field name="name">Contract Lines</field>
+            <field name="res_model">asset.contract.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+	</data>
+</openerp>

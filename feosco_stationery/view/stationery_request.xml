@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="form_stationery_request" model="ir.ui.view">
+            <field name="name">stationery.request.form</field>
+            <field name="model">stationery.request</field>
+            <field name="arch" type="xml">
+                <form string="Request">
+                    <header>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <div clas="oe_left">
+                            <button states="draft" name="act_wait" type="object" string="Confirm" class="oe_highlight"/>
+                            <button states="waiting,pending" name="act_done" type="object" string="Wait" class="oe_highlight"/>
+                            <button states="waiting" name="act_pending" type="object" string="Pending" class="oe_highlight"/>
+                            <button states="cancel" name="act_reset" type="object" string="Reset" class="oe_highlight"/>
+                        </div>
+                        <div class="oe_left">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="type"/>
+                                <field name="department_id" options="{'no_edit': True, 'no_create': True}"/>
+                            </group>
+                            <group>
+                                <field name="date_confirm"/>
+                                <field name="supplier_id"/>
+                            </group>
+                            <field name="reason" nolabel="1" colspan="4"/>
+                            <separator sting="Order Request Information" colspan="4"/>
+                            <field name="line_ids" nolabel="1" colspan="4" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                <tree string="Line Request" editable="top">
+                                    <field name="stationery_id"/>
+                                    <field name="qty"/>
+                                    <field name="reason"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="tree_stationery_request" model="ir.ui.view">
+            <field name="name">stationery.request.tree</field>
+            <field name="model">stationery.request</field>
+            <field name="arch" type="xml">
+                <tree string="Request">
+                    <field name="name"/>
+                    <field name="date_confirm"/>
+                    <field name="type"/>
+                    <field name="department_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="act_stationery_request" model="ir.actions.act_window">
+            <field name="name">Request</field>
+            <field name="res_model">stationery.request</field>
+            <field name="view_type">form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Nơi nhân viên yêu cầu cấp phát văn phòng phẩm
+                </p>
+            </field>
+        </record>
+
+
+        <menuitem id="menu_act_stationery_request"
+                  action="act_stationery_request"
+                  parent="menu_stationeny_request"
+                  sequence="10"/>
+
+
+    </data>
+</openerp>

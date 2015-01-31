@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+	    <record model="ir.ui.view" id="feosco_wizard_asset_assign_form">
+	        <field name="name">feosco.wizard.asset.assign.form</field>
+	        <field name="model">feosco.wizard.asset.assign</field>
+	        <field name="arch" type="xml">
+	            <form string="Assign Asset">
+                    <header>
+                        <button string="Action"
+                                type="object"
+                                name="action_assign"
+                                icon="gtk-execute"
+                                class="oe_hightlight"/>
+                        <button icon="gtk-cancel" special="cancel" string="Cancel" class="oe_hightlight"/>
+                    </header>
+                    <group>
+                        <field name="public"/>
+                    </group>
+                    <group attrs="{'invisible': [('public', '=', True)]}">
+                        <separator string="Assign to User" colspan="4"/>
+                        <field name="user_id" colspan="4" attrs="{'invisible': [('public', '=', True)], 'required': [('public', '=', False)]}"/>
+                    </group>
+	            </form>
+	        </field>
+	    </record>
+
+	    <record model="ir.actions.act_window" id="action_feosco_wizard_asset_assign">
+	        <field name="name">Assign Asset</field>
+	        <field name="type">ir.actions.act_window</field>
+	        <field name="res_model">feosco.wizard.asset.assign</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">form</field>
+	    </record>
+
+
+	    <act_window id="multi_action_feosco_wizard_asset_assign"
+             multi="True"
+             key2="client_action_multi"
+             name="Assign Asset"
+             res_model="feosco.wizard.asset.assign"
+             src_model="account.asset.asset"
+             view_mode="form"
+             target="new"
+             view_type="form"
+             view_id="feosco_wizard_asset_assign_form"/>
+
+    </data>
+</openerp>

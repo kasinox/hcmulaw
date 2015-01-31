@@ -1,0 +1,6 @@
+import asset_contract_role
+import asset_contract
+import asset_stock
+import asset_contract_line
+import asset_request
+import asset_request_line

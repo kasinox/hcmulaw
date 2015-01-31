@@ -1,0 +1,89 @@
+<openerp>
+<data>
+
+    <menuitem id="menu_feosco_root"
+              name="Asset Management"
+              icon="terp-stock"
+              sequence="51"
+              groups="group_asset_user,group_asset_user_department_manager,group_asset_wareshouse_user,group_asset_wareshouse_manager,group_asset_it_user,group_asset_it_manager,group_asset_admin"/>
+
+
+    <menuitem parent="menu_feosco_root"
+              id="menu_feosco_asset_root"
+              name="Asset List"
+              icon="terp-stock"
+              sequence="10"
+              groups="group_asset_user,group_asset_user_department_manager,group_asset_wareshouse_user,group_asset_wareshouse_manager,group_asset_it_user,group_asset_it_manager,group_asset_admin"/>
+
+        <menuitem parent="menu_feosco_asset_root"
+                id="feosco_menu_action_account_asset_asset_list_normal"
+                action="account_asset.action_account_asset_asset_list_normal"
+                groups="group_asset_wareshouse_user,group_asset_it_user"
+                sequence="10"
+                name="Categories"/>
+
+        <menuitem parent="menu_feosco_asset_root"
+                id="feosco_menu_action_account_asset_asset_form"
+                groups="group_asset_user,group_asset_wareshouse_user,group_asset_it_user"
+                action="account_asset.action_account_asset_asset_form"
+                sequence="20"
+                name="Assets"/>
+
+        <menuitem parent="menu_feosco_asset_root"
+                  id="menu_act_feosco_print_selection"
+                  action="act_feosco_print_selection"
+                  groups="group_asset_wareshouse_user,group_asset_it_user"
+                  sequence="30"/>
+
+        <menuitem parent="menu_feosco_asset_root"
+                  id="menu_action_open_view_feosco_print_asset"
+                  action="action_open_view_feosco_print_asset"
+                  groups="group_asset_wareshouse_user,group_asset_it_user"
+                  sequence="40"/>
+
+
+    <menuitem parent="menu_feosco_root"
+              id="menu_feosco_asset_import"
+              name="In Out Data"
+              icon="terp-stock"
+              sequence="20"
+              groups="group_asset_wareshouse_user,group_asset_it_user"/>
+
+    <menuitem parent="menu_feosco_root"
+            id="menu_feosco_asset_scan"
+            name="Inventory"
+            sequence="30"
+            groups="account.group_account_invoice,feosco_account_asset.group_asset_wareshouse_user,feosco_account_asset.group_asset_it_user"/>
+
+    <menuitem parent="menu_feosco_root"
+              id="menu_assset_reporting"
+              name="Báo cáo"
+              sequence="40"
+              groups="group_asset_wareshouse_user,group_asset_it_user"/>
+
+    <menuitem parent="menu_feosco_root"
+              id="menu_feosco_asset_config"
+              name="Configuration"
+              icon="terp-tools"
+              sequence="50"
+              groups="group_asset_it_user"/>
+
+            <menuitem action="stock.action_location_form"
+                id="feosco_menu_action_location_form"
+                parent="menu_feosco_asset_config"
+                sequence="10"/>
+
+            <menuitem action="product.product_uom_form_action"
+                id="feosco_menu_product_uom_form_action"
+                parent="menu_feosco_asset_config"
+                sequence="20"
+                />
+
+            <menuitem parent="menu_feosco_asset_config"
+                id="menu_feosco_asset_config_asset"
+                name="Variants"
+                sequence="30"/>
+
+
+</data>
+</openerp>

@@ -1,0 +1,8 @@
+Tên TS ( cột Asset Name),Danh mục TS ( cột Asset Category),Số lượng hiện có ( cột Quantity),Giá mua về ( cột Gross Value),Hao mòn % trên từng năm ( cột Percent (%) of year),Giá trị đã hao mòn rồi (Depreciated (%)),Phòng ban sử dụng ( Department ),Người dùng hệ thống (User),Đơn vị tính tài sản ( Uom ),Ngân sách mua từ ( Gross value ),Năm mua ( 2 số cuối của năm ) cột Purchase Year,Loại tài sản cột Type
+Laptop T420,[MMTBVP] Máy vi tính,1,1500000,10,,Phòng đào tạo,,Unit(s),02,05,06
+Laptop T421,[MMTBVP] Máy vi tính,1,1500000,10,,Phòng đào tạo,,Unit(s),02,05,06
+Laptop T422,[MMTBVP] Máy vi tính,1,1500000,10,,Phòng đào tạo,,Unit(s),02,05,06
+Laptop T423,[MMTBVP] Máy vi tính,1,1500000,10,,Phòng đào tạo,,Unit(s),02,05,06
+Laptop T424,[MMTBVP] Máy vi tính,1,1500000,10,,Phòng đào tạo,,Unit(s),02,05,06
+Laptop T425,[MMTBVP] Máy vi tính,1,1500000,10,,Phòng đào tạo,,Unit(s),02,05,06
+Laptop T426,[MMTBVP] Máy vi tính,1,1500000,10,,Phòng đào tạo,,Unit(s),02,05,06

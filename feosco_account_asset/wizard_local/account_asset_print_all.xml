@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+    
+	    <record model="ir.ui.view" id="feosco_account_asset_print_all_form_view">
+	        <field name="name">Printer Barcode</field>
+	        <field name="model">feosco.asset.print.all</field>
+	        <field name="arch" type="xml">
+	            <form string="form_string">
+                    <header>
+                        <button string="Print"
+                                type="object"
+                                name="action_print_all"
+                                icon="gtk-print"
+                                class="oe_hightlight"/>
+                        <button icon="gtk-cancel"
+                                special="cancel"
+                                string="Cancel"
+                                class="oe_hightlight"/>
+                    </header>
+                    <group>
+                    	<field name="print_type"/>
+                        <field name="qty"/>
+                    </group>
+	            </form>
+	        </field>
+	    </record>
+	
+	    <record model="ir.actions.act_window" id="action_feosco_account_asset_print_all">
+	        <field name="name">Printer Barcode</field>
+	        <field name="type">ir.actions.act_window</field>
+	        <field name="res_model">feosco.asset.print.all</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">form</field>
+	    </record>
+
+
+	    <act_window id="action_print_label"
+             multi="True"
+             key2="client_action_multi" name="Printer Barcode"
+             res_model="feosco.asset.print.all"
+             src_model="account.asset.asset"
+             view_mode="form"
+             target="new"
+             view_type="form"
+             view_id="feosco_account_asset_print_all_form_view"/>
+
+
+    
+    </data>
+</openerp>

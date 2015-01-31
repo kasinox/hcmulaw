@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="feosco_asset_scan_form">
+            <field name="name">feosco.asset.scan.form</field>
+            <field name="model">feosco.asset.scan</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Scans">
+                    <group col="6" colspan="4">
+                        <field name="create_date"/>
+                        <field name="asset_id" readonly="1"/>
+                        <field name="scan_time_id"/>
+                        <field name="note" readonly="1"/>
+                    </group>
+                    
+                    <group colspan="4" col="10">
+                    	<group colspan="2">
+                    		<separator string="Hình ảnh được cập nhật" colspan="10"/>
+                    		<field name="image" widget="image" nolabel="1"/> 	
+                    	</group>
+                    	<group colspan="8">
+                    	</group>
+                    	
+                    </group>
+                    
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="feosco_asset_scan_tree">
+            <field name="name">feosco.asset.scan.tree</field>
+            <field name="model">feosco.asset.scan</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Scans">
+                    <field name="create_date"/>
+                    <field name="asset_id"/>
+                    <field name="scan_time_id"/>
+                    <field name="note"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="feosco_asset_scan_search" model="ir.ui.view">
+            <field name="name">feosco.asset.scan.search</field>
+            <field name="model">feosco.asset.scan</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search string="Scans filter">
+                    <field name="create_date"/>
+                    <field name="asset_id" readonly="1"/>
+                    <field name="note" readonly="1"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="feosco_asset_scan_act">
+            <field name="name">Scan Histories</field>
+            <field name="res_model">feosco.asset.scan</field>
+            <field name="view_type">form</field>
+        </record>
+
+        <menuitem parent="menu_feosco_asset_scan"
+                  id="menu_feosco_asset_scan_act"
+                  action="feosco_asset_scan_act"
+                  sequence="2"/>
+    </data>
+</openerp>

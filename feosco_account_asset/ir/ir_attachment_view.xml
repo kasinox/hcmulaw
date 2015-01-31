@@ -1,0 +1,19 @@
+<openerp>
+	<data>
+
+
+		<record id="extend_view_attachment_form" model="ir.ui.view">
+            <field name="model">ir.attachment</field>
+			<field name="priority" eval="20"/>
+            <field name="arch" type="xml">
+                <form string="Attachments">
+                    <group>
+                        <field name="datas" filename="datas_fname"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+
+	</data>
+</openerp>

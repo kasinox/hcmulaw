@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <record id="search_feosco_asset_report" model="ir.ui.view">
+        <field name="name">feosco.asset.report.search</field>
+        <field name="model">feosco.asset.report</field>
+        <field name="arch" type="xml">
+            <search string="Báo cáo phân tích">
+                <field name="name"/>
+                <field name="department" />
+                <field name="num"/>
+	            <field name="qr"/>
+	            <field name="year"/>
+	            <field name="user"/>
+
+                <group expand="0" string="Nhóm theo">
+                    <filter string="name" name="Tên" context="{'group_by':'name'}"/>
+                    <filter string="department" name="Phòng ban" context="{'group_by':'department'}"/>
+	                <filter string="num" name="Số thứ tự" context="{'group_by':'num'}"/>
+	                <filter string="qr" name="Mã code" context="{'group_by':'qr'}"/>
+	                <filter string="year" name="Năm mua" context="{'group_by':'year'}"/>
+	                <filter string="user" name="Người dùng" context="{'group_by':'user'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="graph_feosco_asset_report" model="ir.ui.view">
+		<field name="name">feosco.asset.report.graph</field>
+		<field name="model">feosco.asset.report</field>
+		<field name="arch" type="xml">
+			<graph string="Báo cáo phân tích" type="pivot">
+				<field name="department" type="row"/>
+				<field name="user" type="row"/>
+                <field name="name" type="row"/>
+				<field name="qr" type="row"/>
+				<field name="year" type="row"/>
+				<field name="num" type="row"/>
+				<field name="qty" type="measure"/>
+             </graph>
+         </field>
+    </record>
+    <record id="action_feosco_asset_report" model="ir.actions.act_window">
+        <field name="name">Báo cáo phân tích</field>
+        <field name="res_model">feosco.asset.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">graph</field>
+        <field name="search_view_id" ref="search_feosco_asset_report"/>
+    </record>
+
+    <menuitem action="action_feosco_asset_report"
+        id="menu_action_feosco_asset_report"
+        sequence="20"
+        parent="menu_assset_reporting"/>
+
+</data>
+</openerp>

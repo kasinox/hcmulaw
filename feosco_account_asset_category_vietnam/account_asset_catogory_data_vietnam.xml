@@ -1,0 +1,1207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="True">
+
+    <!-- May moc - thiet bi id: 54
+
+        A- Máy móc, thiết bị văn phòng
+        - Máy vi tính
+        - Thiết bị mạng truyền thông
+        - Phương tiện lưu trữ số liệu
+        - Các thiết bị tin học khác
+        - Máy in
+        - Máy chiếu
+        - Máy Fax
+        - Máy huỷ tài liệu
+        - Máy đun nước
+        - Máy, thiết bị lọc nước
+        - Máy hút ẩm
+        - Máy hút bụi
+        - Ti vi
+        - Video
+        - Máy CD
+        - Máy DVD
+        - Thiết bị âm thanh
+        - Máy ghi âm
+        - Máy ảnh
+        - Tủ lạnh
+        - Tủ đá
+        - Máy giặt
+        - Máy Photocopy
+        - Két sắt các loại
+        - Máy phát điện
+        - Máy phát động lực
+        - Máy biến áp điện và thiết bị nguồn
+        - Máy móc thiết bị động lực khác
+        - Máy điều hoà lưu thông không khí,
+        - Phương tiện phòng cháy chữa cháy
+        - Thang máy
+        - Thang nâng hàng
+        - Máy móc thiết bị văn phòng khác
+
+        B- Máy móc, thiết bị dùng cho công tác chuyên môn
+
+        - Máy công cụ
+        - Máy khai khoáng xây dựng
+        - Máy kéo
+        - Máy dùng cho nông, lâm nghiệp
+        - Máy bơm nước và xăng dầu
+        - Thiết bị luyện kim, gia công bề mặt chống gỉ và ăn mòn kim loại
+        - Thiết bị chuyên dùng sản xuất các loại hoá chất
+        - Máy móc, thiết bị chuyên dùng sản xuất vật liệu xây dựng, đồ sành sứ, thuỷ tinh
+        - Thiết bị chuyên dùng sản xuất các linh kiện và điện tử, quang học, cơ khí chính xác
+        - Máy móc, thiết bị dùng trong các ngành sản xuất da, in, văn phòng phẩm và văn hoá phẩm
+        - Máy móc, thiết bị dùng trong ngành dệt
+        - Máy móc, thiết bị dùng trong ngành may mặc
+        - Máy móc, thiết bị dùng trong ngành giấy
+        - Máy móc, thiết bị sản xuất, chế biến lương thực, thực phẩm
+        - Máy móc, thiết bị  điện ảnh, y tế
+        - Máy móc, thiết bị viễn thông, thông tin, điện tử, tin học và truyền hình
+        - Máy móc, thiết bị sản xuất dược phẩm
+        - Máy móc, thiết bị khác
+        - Thiết bị đo lường, thử nghiệm các đại lượng cơ học, âm học và nhiệt học
+        - Thiết bị quang học và quang phổ
+        - Thiết bị điện và điện tử
+        - Thiết bị đo và phân tích lý hoá
+        - Thiết bị và dụng cụ đo phóng xạ
+        - Thiết bị chuyên ngành đặc biệt
+        - Các thiết bị đo lường, thí nghiệm khác
+        - Khuôn mẫu dùng trong công nghiệp đúc
+
+    III- Phương tiện vận tải, truyền dẫn
+
+    A- Phương tiện vận tải
+
+    1. Phương tiện vận tải đường bộ
+    2. Phương tiện vận tải đường sắt
+    3. Phương tiện vận tải đường thuỷ
+    4. Phương tiện vận tải đường không
+    7. Thiết bị và phương tiện vận khác tải
+
+    B- Thiết bị truyền dẫn
+
+    1. Phương tiện truyền dẫn thông tin
+    2. Hệ thống dây điện thoại
+    3. Tổng đài điện thoại
+    4. Điện thoại di động, cố định
+    5. Máy bộ đàm
+    6. Phương tiện truyền dẫn điện
+    7. Phương tiện truyền dẫn các loại khác
+
+    IV- Thiết bị, dụng cụ quản lý
+
+    - Bàn làm việc
+    - Ghế ngồi làm việc
+    - Bộ bàn ghế tiếp khách
+    - Tủ đựng tài liệu
+    - Tủ trưng bày
+    - Giá kệ để tài liệu chứng từ
+    - Bộ Bàn ghế họp
+    - Thiết bị, phương tiện quản lý khác
+
+    V- Cây lâu năm, súc vật làm việc và cho sản phẩm
+
+    - Các loại súc vật
+    - Cây lâu năm, vườn cây công nghiệp, vườn cây ăn quả, vườn cây lâu năm.
+    - 2Thảm cỏ, thảm cây xanh, cây cảnh, vườn cây cảnh, hòn non bộ
+
+    -->
+        <record id="account_asset_category_building" model="account.asset.category">
+            <field name="name">Nhà, vật kiến trúc</field>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">53</field>
+            <field name="account_depreciation_id">53</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">1.25</field>
+        </record>
+
+        <record id="account_asset_category_01" model="account.asset.category">
+            <field name="name">Nhà cấp I, nhà đặc biệt</field>
+            <field name="feosco_parent_id" ref="account_asset_category_building"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">53</field>
+            <field name="account_depreciation_id">53</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">1.25</field>
+        </record>
+
+        <record id="account_asset_category_02" model="account.asset.category">
+            <field name="name">Nhà cấp II</field>
+            <field name="feosco_parent_id" ref="account_asset_category_building"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">53</field>
+            <field name="account_depreciation_id">53</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">2</field>
+        </record>
+
+        <record id="account_asset_category_03" model="account.asset.category">
+            <field name="name">Nhà cấp III</field>
+            <field name="feosco_parent_id" ref="account_asset_category_building"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">53</field>
+            <field name="account_depreciation_id">53</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">4</field>
+        </record>
+
+        <record id="account_asset_category_04" model="account.asset.category">
+            <field name="name">Nhà cấp IV</field>
+            <field name="feosco_parent_id" ref="account_asset_category_building"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">53</field>
+            <field name="account_depreciation_id">53</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">6.5</field>
+        </record>
+
+        <record id="account_asset_category_05" model="account.asset.category">
+            <field name="name">Kho chứa, bể chứa, cầu đường, bãi đỗ, sân phơi</field>
+            <field name="feosco_parent_id" ref="account_asset_category_building"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">53</field>
+            <field name="account_depreciation_id">53</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">5</field>
+        </record>
+
+        <record id="account_asset_category_06" model="account.asset.category">
+            <field name="name">Kè, đập, cống, kênh, mương máng, bến cảng, ụ tàu...</field>
+            <field name="feosco_parent_id" ref="account_asset_category_building"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">53</field>
+            <field name="account_depreciation_id">53</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">5</field>
+        </record>
+
+        <record id="account_asset_category_07" model="account.asset.category">
+            <field name="name">Các vật kiến trúc khác</field>
+            <field name="feosco_parent_id" ref="account_asset_category_building"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">53</field>
+            <field name="account_depreciation_id">53</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">10</field>
+        </record>
+
+        <!-- A- Máy móc, thiết bị văn phòng -->
+        <record id="account_asset_category_mm_tb" model="account.asset.category">
+            <field name="name">Máy móc, thiết bị</field>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+
+        <record id="account_asset_category_08" model="account.asset.category">
+            <field name="name">Máy vi tính</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+
+        <record id="account_asset_category_09" model="account.asset.category">
+            <field name="name">Thiết bị mạng truyền thông</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+
+        <record id="account_asset_category_10" model="account.asset.category">
+            <field name="name">Phương tiện lưu trữ số liệu</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+
+        <record id="account_asset_category_11" model="account.asset.category">
+            <field name="name">Các thiết bị tin học khác</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+
+        <record id="account_asset_category_12" model="account.asset.category">
+            <field name="name">Máy in</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+
+        <record id="account_asset_category_13" model="account.asset.category">
+            <field name="name">Máy chiếu</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+
+        <record id="account_asset_category_14" model="account.asset.category">
+            <field name="name">Máy Fax</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+
+        <record id="account_asset_category_15" model="account.asset.category">
+            <field name="name">Máy huỷ tài liệu</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+
+        <record id="account_asset_category_16" model="account.asset.category">
+            <field name="name">Máy đun nước</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+
+        <record id="account_asset_category_17" model="account.asset.category">
+            <field name="name">Máy, thiết bị lọc nước</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+
+        <record id="account_asset_category_18" model="account.asset.category">
+            <field name="name">Máy hút ẩm</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+        <record id="account_asset_category_19" model="account.asset.category">
+            <field name="name">Máy hút bụi</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+        <record id="account_asset_category_20" model="account.asset.category">
+            <field name="name">Ti vi</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+
+
+        <record id="account_asset_category_21" model="account.asset.category">
+            <field name="name">Video</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+        <record id="account_asset_category_22" model="account.asset.category">
+            <field name="name">Máy CD</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+        <record id="account_asset_category_23" model="account.asset.category">
+            <field name="name">Máy DVD</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+
+        <record id="account_asset_category_24" model="account.asset.category">
+            <field name="name">Thiết bị âm thanh</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+        <record id="account_asset_category_25" model="account.asset.category">
+            <field name="name">Máy ghi âm</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+        <record id="account_asset_category_26" model="account.asset.category">
+            <field name="name">Máy ảnh</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+
+        <record id="account_asset_category_27" model="account.asset.category">
+            <field name="name">Tủ lạnh</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+        <record id="account_asset_category_28" model="account.asset.category">
+            <field name="name">Tủ đá</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+        <record id="account_asset_category_29" model="account.asset.category">
+            <field name="name">Máy giặt</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+
+        <record id="account_asset_category_30" model="account.asset.category">
+            <field name="name">Máy Photocopy</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+        <record id="account_asset_category_31" model="account.asset.category">
+            <field name="name">Két sắt các loại</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+        <record id="account_asset_category_32" model="account.asset.category">
+            <field name="name">Máy phát điện</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+
+        <record id="account_asset_category_33" model="account.asset.category">
+            <field name="name">Máy phát động lực</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+        <record id="account_asset_category_34" model="account.asset.category">
+            <field name="name">Máy biến áp điện và thiết bị nguồn</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+        <record id="account_asset_category_35" model="account.asset.category">
+            <field name="name">Máy móc thiết bị động lực khác</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+
+        <record id="account_asset_category_36" model="account.asset.category">
+            <field name="name">Máy điều hoà lưu thông không khí</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+        <record id="account_asset_category_37" model="account.asset.category">
+            <field name="name">Phương tiện phòng cháy chữa cháy</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+        <record id="account_asset_category_38" model="account.asset.category">
+            <field name="name">Thang máy</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+
+        <record id="account_asset_category_39" model="account.asset.category">
+            <field name="name">Thang nâng hàng</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+        <record id="account_asset_category_40" model="account.asset.category">
+            <field name="name">Máy móc thiết bị văn phòng khác</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_tb"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+
+        <!--B- Máy móc, thiết bị dùng cho công tác chuyên môn-->
+
+
+        <record id="account_asset_category_mm_ttb_ctcm" model="account.asset.category">
+            <field name="name">Máy móc, thiết bị dùng cho công tác chuyên môn</field>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">10</field>
+        </record>
+
+        <record id="account_asset_category_41" model="account.asset.category">
+            <field name="name">Máy công cụ</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">10</field>
+        </record>
+        <record id="account_asset_category_42" model="account.asset.category">
+            <field name="name">Máy khai khoáng xây dựng</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+        <record id="account_asset_category_43" model="account.asset.category">
+            <field name="name">Máy kéo</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+        <record id="account_asset_category_44" model="account.asset.category">
+            <field name="name">Máy dùng cho nông, lâm nghiệp</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+
+
+        <record id="account_asset_category_45" model="account.asset.category">
+            <field name="name">Máy bơm nước và xăng dầu</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+        <record id="account_asset_category_46" model="account.asset.category">
+            <field name="name">Thiết bị luyện kim, gia công bề mặt chống gỉ và ăn mòn kim loại</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">10</field>
+        </record>
+        <record id="account_asset_category_47" model="account.asset.category">
+            <field name="name">Thiết bị chuyên dùng sản xuất các loại hoá chất</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">10</field>
+        </record>
+        <record id="account_asset_category_48" model="account.asset.category">
+            <field name="name">Máy móc, thiết bị chuyên dùng sản xuất vật liệu xây dựng, đồ sành sứ, thuỷ tinh</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+
+
+        <record id="account_asset_category_49" model="account.asset.category">
+            <field name="name">Thiết bị chuyên dùng sản xuất các linh kiện và điện tử, quang học, cơ khí chính xác</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">7</field>
+        </record>
+        <record id="account_asset_category_50" model="account.asset.category">
+            <field name="name">Máy móc, thiết bị dùng trong các ngành sản xuất da, in, văn phòng phẩm và văn hoá phẩm</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">10</field>
+        </record>
+        <record id="account_asset_category_51" model="account.asset.category">
+            <field name="name">Máy móc, thiết bị dùng trong ngành dệt</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">2</field>
+        </record>
+        <record id="account_asset_category_52" model="account.asset.category">
+            <field name="name">Máy móc, thiết bị dùng trong ngành may mặc</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+
+        <record id="account_asset_category_53" model="account.asset.category">
+            <field name="name">Máy móc, thiết bị dùng trong ngành giấy</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">10</field>
+        </record>
+        <record id="account_asset_category_54" model="account.asset.category">
+            <field name="name">Máy móc, thiết bị sản xuất, chế biến lương thực, thực phẩm</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">10</field>
+        </record>
+        <record id="account_asset_category_55" model="account.asset.category">
+            <field name="name">Máy móc, thiết bị  điện ảnh, y tế</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+        <record id="account_asset_category_56" model="account.asset.category">
+            <field name="name">Máy móc, thiết bị viễn thông, thông tin, điện tử, tin học và truyền hình</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+
+        <record id="account_asset_category_57" model="account.asset.category">
+            <field name="name">Máy móc, thiết bị sản xuất dược phẩm</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+        <record id="account_asset_category_58" model="account.asset.category">
+            <field name="name">Máy móc, thiết bị khác</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">10</field>
+        </record>
+        <record id="account_asset_category_59" model="account.asset.category">
+            <field name="name">Thiết bị đo lường, thử nghiệm các đại lượng cơ học, âm học và nhiệt học</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">10</field>
+        </record>
+        <record id="account_asset_category_60" model="account.asset.category">
+            <field name="name">Thiết bị quang học và quang phổ</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">10</field>
+        </record>
+
+        <record id="account_asset_category_60" model="account.asset.category">
+            <field name="name">Thiết bị điện và điện tử</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+        <record id="account_asset_category_61" model="account.asset.category">
+            <field name="name">Thiết bị đo và phân tích lý hoá</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">10</field>
+        </record>
+        <record id="account_asset_category_62" model="account.asset.category">
+            <field name="name">Thiết bị và dụng cụ đo phóng xạ</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">10</field>
+        </record>
+        <record id="account_asset_category_63" model="account.asset.category">
+            <field name="name">Thiết bị chuyên ngành đặc biệt</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+
+        <record id="account_asset_category_64" model="account.asset.category">
+            <field name="name">Các thiết bị đo lường, thí nghiệm khác</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">10</field>
+        </record>
+        <record id="account_asset_category_65" model="account.asset.category">
+            <field name="name">Khuôn mẫu dùng trong công nghiệp đúc</field>
+            <field name="feosco_parent_id" ref="account_asset_category_mm_ttb_ctcm"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+
+        <!--III- Phương tiện vận tải, truyền dẫn-->
+
+        <record id="account_asset_category_ptvt_td" model="account.asset.category">
+            <field name="name">Phương tiện vận tải, truyền dẫn</field>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">10</field>
+        </record>
+
+        <record id="account_asset_category_66" model="account.asset.category">
+            <field name="name">Phương tiện vận tải đường bộ</field>
+            <field name="feosco_parent_id" ref="account_asset_category_ptvt_td"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">10</field>
+        </record>
+        <record id="account_asset_category_67" model="account.asset.category">
+            <field name="name">Phương tiện vận tải đường sắt</field>
+            <field name="feosco_parent_id" ref="account_asset_category_ptvt_td"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">10</field>
+        </record>
+        <record id="account_asset_category_68" model="account.asset.category">
+            <field name="name">Phương tiện vận tải đường thuỷ</field>
+            <field name="feosco_parent_id" ref="account_asset_category_ptvt_td"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">10</field>
+        </record>
+        <record id="account_asset_category_69" model="account.asset.category">
+            <field name="name">Phương tiện vận tải đường không</field>
+            <field name="feosco_parent_id" ref="account_asset_category_ptvt_td"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">10</field>
+        </record>
+        <record id="account_asset_category_70" model="account.asset.category">
+            <field name="name">Thiết bị và phương tiện vận khác tải</field>
+            <field name="feosco_parent_id" ref="account_asset_category_ptvt_td"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">10</field>
+        </record>
+
+         <record id="account_asset_category_71" model="account.asset.category">
+             <field name="name">Phương tiện truyền dẫn thông tin</field>
+             <field name="feosco_parent_id" ref="account_asset_category_ptvt_td"/>
+             <field name="journal_id">7</field>
+             <field name="account_asset_id">54</field>
+             <field name="account_depreciation_id">54</field>
+             <field name="account_expense_depreciation_id">69</field>
+             <field name="company_id" ref="base.main_company"/>
+             <field name="method_time">percent</field>
+             <field name="feosco_percent">20</field>
+        </record>
+        <record id="account_asset_category_72" model="account.asset.category">
+            <field name="name">Hệ thống dây điện thoại</field>
+            <field name="feosco_parent_id" ref="account_asset_category_ptvt_td"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+        <record id="account_asset_category_73" model="account.asset.category">
+            <field name="name">Tổng đài điện thoại</field>
+            <field name="feosco_parent_id" ref="account_asset_category_ptvt_td"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+        <record id="account_asset_category_74" model="account.asset.category">
+            <field name="name">Điện thoại di động, cố định</field>
+            <field name="feosco_parent_id" ref="account_asset_category_ptvt_td"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+        <record id="account_asset_category_75" model="account.asset.category">
+            <field name="name">Máy bộ đàm</field>
+            <field name="feosco_parent_id" ref="account_asset_category_ptvt_td"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+        <record id="account_asset_category_76" model="account.asset.category">
+            <field name="name">Phương tiện truyền dẫn điện</field>
+            <field name="feosco_parent_id" ref="account_asset_category_ptvt_td"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+        <record id="account_asset_category_77" model="account.asset.category">
+            <field name="name">Phương tiện truyền dẫn các loại khác</field>
+            <field name="feosco_parent_id" ref="account_asset_category_ptvt_td"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">20</field>
+        </record>
+
+
+        <!--IV- Thiết bị, dụng cụ quản lý-->
+
+        <record id="account_asset_category_tb_dcql" model="account.asset.category">
+            <field name="name">Thiết bị, dụng cụ quản lý</field>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+
+        <record id="account_asset_category_78" model="account.asset.category">
+            <field name="name">Bàn làm việc</field>
+            <field name="feosco_parent_id" ref="account_asset_category_tb_dcql"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+        <record id="account_asset_category_79" model="account.asset.category">
+            <field name="name">Ghế ngồi làm việc</field>
+            <field name="feosco_parent_id" ref="account_asset_category_tb_dcql"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+        <record id="account_asset_category_80" model="account.asset.category">
+            <field name="name">Bộ bàn ghế tiếp khách</field>
+            <field name="feosco_parent_id" ref="account_asset_category_tb_dcql"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+        <record id="account_asset_category_80" model="account.asset.category">
+            <field name="name">Tủ đựng tài liệu</field>
+            <field name="feosco_parent_id" ref="account_asset_category_tb_dcql"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+        <record id="account_asset_category_81" model="account.asset.category">
+            <field name="name">Tủ trưng bày</field>
+            <field name="feosco_parent_id" ref="account_asset_category_tb_dcql"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+        <record id="account_asset_category_82" model="account.asset.category">
+            <field name="name">Giá kệ để tài liệu chứng từ</field>
+            <field name="feosco_parent_id" ref="account_asset_category_tb_dcql"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+        <record id="account_asset_category_83" model="account.asset.category">
+            <field name="name">Bộ Bàn ghế họp</field>
+            <field name="feosco_parent_id" ref="account_asset_category_tb_dcql"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+        <record id="account_asset_category_84" model="account.asset.category">
+            <field name="name">Thiết bị, phương tiện quản lý khác</field>
+            <field name="feosco_parent_id" ref="account_asset_category_tb_dcql"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+
+
+        <!--- Cây lâu năm, súc vật làm việc và cho sản phẩm-->
+
+        <record id="account_asset_category_cln_svlv_csp" model="account.asset.category">
+            <field name="name">Cây lâu năm, súc vật làm việc và cho sản phẩm</field>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+
+        <record id="account_asset_category_85" model="account.asset.category">
+            <field name="name">Các loại súc vật</field>
+            <field name="feosco_parent_id" ref="account_asset_category_cln_svlv_csp"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+        <record id="account_asset_category_86" model="account.asset.category">
+            <field name="name">Cây lâu năm, vườn cây công nghiệp, vườn cây ăn quả, vườn cây lâu năm</field>
+            <field name="feosco_parent_id" ref="account_asset_category_cln_svlv_csp"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">4</field>
+        </record>
+        <record id="account_asset_category_87" model="account.asset.category">
+            <field name="name">Thảm cỏ, thảm cây xanh, cây cảnh, vườn cây cảnh, hòn non bộ</field>
+            <field name="feosco_parent_id" ref="account_asset_category_cln_svlv_csp"/>
+            <field name="journal_id">7</field>
+            <field name="account_asset_id">54</field>
+            <field name="account_depreciation_id">54</field>
+            <field name="account_expense_depreciation_id">69</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="method_time">percent</field>
+            <field name="feosco_percent">12.5</field>
+        </record>
+
+
+    </data>
+</openerp>

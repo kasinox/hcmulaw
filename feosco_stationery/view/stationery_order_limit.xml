@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        
+        <record id="form_stationery_order_limit" model="ir.ui.view">
+            <field name="name">stationery.order.limit.form</field>
+            <field name="model">stationery.order.limit</field>
+            <field name="arch" type="xml">
+                <form string="Limit">
+                    <header>
+
+                    </header>
+                    <sheet>
+                        <div class="oe_left">
+                            <field name="stationery_id"/>
+                        </div>
+                        <group>
+                            <field name="total_limit"/>
+                            <field name="department_id"/>
+                            <field name="role_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="tree_stationery_order_limit" model="ir.ui.view">
+            <field name="name">stationery.order.limit.tree</field>
+            <field name="model">stationery.order.limit</field>
+            <field name="arch" type="xml">
+                <tree string="Limit">
+                    <field name="stationery_id"/>
+                    <field name="total_limit"/>
+                    <field name="department_id"/>
+                    <field name="role_id"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="act_stationery_order_limit" model="ir.actions.act_window">
+            <field name="name">Limit</field>
+            <field name="res_model">stationery.order.limit</field>
+            <field name="view_type">form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Nơi quy định các giới hạn từng loại văn phòng phẩm cho từng phòng
+                    Ví dụ: Quý 1 , chỉ được cấp 10 bút chì cho phòng ABC
+                    Dựa vào những thiết lập này, hệ thống sẻ cảnh báo khi cấp phát vượt mức quy định
+                </p>
+            </field>
+        </record>
+
+
+        <menuitem id="menu_act_stationery_order_limit"
+                  action="act_stationery_order_limit"
+                  parent="menu_stationeny_configuration"
+                  sequence="10"/>
+
+
+    </data>
+</openerp>

@@ -1,0 +1,69 @@
+<openerp>
+	<data>
+
+		<record model="ir.ui.view" id="formasset_request_line">
+            <field name="name">asset.request.line.form</field>
+            <field name="model">asset.request.line</field>
+            <field name="arch" type="xml">
+                <form string="Lines">
+                    <header>
+                        <field name="state" widget="statusbar" colspan="4"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_left">
+                            <label for="name" string="Name">
+                                <h2>
+                                    <field name="name"/>
+                                </h2>
+                            </label>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="request_id"/>
+                                <field name="type"/>
+                            </group>
+                            <group>
+                                <field name="qty"/>
+                            </group>
+                            <field name="reason"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="treeasset_request_line">
+            <field name="name">asset.request.line.tree</field>
+            <field name="model">asset.request.line</field>
+            <field name="arch" type="xml">
+                <tree string="Lines" colors="red: state == 'cancel'; grey: state == 'cancel'; blue: state == 'done'">
+                    <field name="name"/>
+                    <field name="request_id"/>
+                    <field name="type"/>
+                    <field name="qty"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="searchasset_request_line">
+            <field name="name">asset.request.line.search</field>
+            <field name="model">asset.request.line</field>
+            <field name="arch" type="xml">
+                <search string="Lines">
+                    <field name="name"/>
+                    <field name="request_id"/>
+                    <field name="type"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_asset_request_line">
+            <field name="name">Request Lines</field>
+            <field name="res_model">asset.request.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+		
+	</data>
+</openerp>

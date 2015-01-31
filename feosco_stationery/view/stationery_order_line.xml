@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+
+        <record id="form_stationery_order_line" model="ir.ui.view">
+            <field name="name">stationery.order.line.form</field>
+            <field name="model">stationery.order.line</field>
+            <field name="arch" type="xml">
+                <form string="Line">
+                    <header>
+
+                    </header>
+                    <sheet>
+                        <div class="oe_left">
+                            <field name="stationery_id"/>
+                        </div>
+                        <group>
+                            <field name="qty"/>
+                            <field name="order_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="tree_stationery_order_line" model="ir.ui.view">
+            <field name="name">stationery.order.line.tree</field>
+            <field name="model">stationery.order.line</field>
+            <field name="arch" type="xml">
+                <tree string="Line">
+                    <field name="create_date"/>
+                    <field name="create_uid"/>
+                    <field name="stationery_id"/>
+                    <field name="tax_ids" widget="many2many_tags"/>
+                    <field name="discount"/>
+                    <field name="total"/>
+                    <field name="qty"/>
+                    <field name="order_id"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="act_stationery_order_line" model="ir.actions.act_window">
+            <field name="name">Order Lines</field>
+            <field name="res_model">stationery.order.line</field>
+            <field name="view_type">form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Các văn phòng phẩm cần mua
+                </p>
+            </field>
+        </record>
+
+
+        <menuitem id="menu_act_stationery_order_line"
+                  action="act_stationery_order_line"
+                  parent="menu_stationeny_configuration"
+                  sequence="20"/>
+
+
+    </data>
+</openerp>

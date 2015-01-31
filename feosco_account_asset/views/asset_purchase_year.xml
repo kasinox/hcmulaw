@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="form_feosco_purchase_year">
+            <field name="name">feosco.purchase.year.form</field>
+            <field name="model">feosco.purchase.year</field>
+            <field name="arch" type="xml">
+                <form string="Purchase Year">
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="default"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="tree_feosco_purchase_year">
+            <field name="name">feosco.purchase.year.tree</field>
+            <field name="model">feosco.purchase.year</field>
+            <field name="arch" type="xml">
+                <tree string="Purchase Year">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="default"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_feosco_purchase_year">
+            <field name="name">Purchase Year</field>
+            <field name="res_model">feosco.purchase.year</field>
+            <field name="view_type">form</field>
+            <field name="view_model">tree,form</field>
+        </record>
+
+        <menuitem parent="menu_feosco_asset_config"
+                  id="menu_action_feosco_purchase_year"
+                  action="action_feosco_purchase_year"
+                  sequence="110"/>
+
+    </data>
+</openerp>

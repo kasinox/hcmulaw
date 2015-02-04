@@ -11,46 +11,60 @@
                         <button string="Đề nghị cấp"
                                 type="object" name="act_confirm"
                                 states="draft" class="oe_highlight"
+                                icon="gtk-execute"
                                 groups="feosco_account_asset.group_asset_user"/>
                         <button string="Quản trị TB duyệt" type="object"
                                 name="act_approved1" states="approved1"
                                 class="oe_highlight"
+                                icon="gtk-execute"
                                 groups="feosco_account_asset.group_asset_wareshouse_user"/>
 
                         <button string="Ban giám hiệu duyệt"
                                 type="object" name="act_approved2"
                                 states="approved2" class="oe_highlight"
+                                icon="gtk-execute"
                                 groups="feosco_account_asset.group_asset_wareshouse_user"/>
 
                         <button string="Đã mua về"
                                 type="object" name="act_approved3"
                                 states="approved3" class="oe_highlight"
+                                icon="gtk-execute"
                                 groups="feosco_account_asset.group_asset_wareshouse_user"/>
 
                         <button string="Từ chối" type="object"
                                 name="act_cancel" states="approved1,approved2"
                                 class="oe_highlight"
+                                icon="gtk-execute"
                                 groups="feosco_account_asset.group_asset_wareshouse_user"/>
 
                         <button string="Đưa về phác thảo"
                                 type="object" name="act_reset"
                                 states="act_approved1,act_approved2"
+                                icon="gtk-execute"
                                 class="oe_highlight"
                                 groups="feosco_account_asset.group_asset_wareshouse_user"/>
                     </header>
 	                <sheet>
                         <h1>
-                            <label for="name" string="Tên đề xuất"/>
+                            <label for="name" string="Tên"/>
                             <field name="name" class="oe_inline"/>
                         </h1>
                         <group>
                             <field name="department_id"/>
-                            <field name="note"/>
-		                    <field name="line_ids">
-                                <tree string="Tài sản yêu cầu" editable="top" colors="red: state == 'cancel'; grey: state == 'cancel'; blue: state == 'done'">
+                            <field name="user_id" invisible="1"/>
+                            <field name="purchase_user_id"/>
+                            <separator string="Lý do huỷ (nếu huỷ)" colspan="4"/>
+                            <field name="reject_reson"/>
+                            <separator string="Ghi chú" colspan="4"/>
+                            <field name="note" nolabel="1" colspan="4"/>
+                            <separator string="Tài sản cần cấp (*)" colspan="4"/>
+		                    <field name="line_ids" nolabel="1" colspan="4">
+                                <tree string="Tài sản yêu cầu" editable="top" colors="red: state == 'cancel';
+                    blue: state in ['draft', 'approved1', 'approved2']; gray: state == 'done'">
                                     <field name="name"/>
                                     <field name="type"/>
                                     <field name="qty"/>
+                                    <field name="reason"/>
                                     <field name="state" readonly="True"/>
                                 </tree>
                             </field>
@@ -69,12 +83,14 @@
             <field name="name">asset.request.tree</field>
             <field name="model">asset.request</field>
             <field name="arch" type="xml">
-                <tree string="Đề xuất" colors="gray: state == 'cancel';
-                    blue: state in ['approved1', 'approved2', 'approved3']">
+                <tree string="Đề xuất" colors="red: state == 'cancel';
+                    blue: state in ['draft', 'approved1', 'approved2']; gray: state == 'done'">
+
                     <field name="name"/>
                     <field name="note"/>
                     <field name="department_id"/>
                     <field name="create_date"/>
+                    <field name="user_id"/>
                     <field name="state"/>
                 </tree>
             </field>
@@ -87,6 +103,7 @@
                 <search string="Đề xuất">
                     <field name="name"/>
                     <field name="note"/>
+                    <field name="user_id"/>
                     <field name="state"/>
                     <filter string="Phòng ban" context="{'group_by': 'department_id'}"/>
                     <filter string="Trạng thái" context="{'group_by': 'state'}"/>

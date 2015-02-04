@@ -53,6 +53,7 @@
         <act_window id="client_action_view_feosco_export_import"
              multi="True"
              key2="client_action_multi" name="Xuất nhập dữ liệu"
+             groups="feosco_account_asset.group_asset_wareshouse_user"
              res_model="feosco.export.import"
              src_model="account.asset.asset"
              view_mode="form"

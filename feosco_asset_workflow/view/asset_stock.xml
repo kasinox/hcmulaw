@@ -7,39 +7,35 @@
             <field name="arch" type="xml">
                 <form string="Nghiệm thu">
                     <header>
-                        <field name="state" string="Trạng thái" widget="statusbar"/>
-                    </header>
-                    <sheet>
-                        <div class="oe_left">
-                            <button name="act_done" type="object"
+                        <button name="act_done" type="object"
                                 class="oe_highlight" string="Nghiệm thu"
                                 states="draft" icon="gtk-execute"
                                 groups="feosco_account_asset.group_asset_wareshouse_user"
                                 confirm="Lưu ý, khi thực hiện chức năng này, hệ thống sẻ tự động tạo ra tài sản mới. Bạn có đồng ý thực hiện tiếp không?"/>
-                            <button name="act_reset" type="object"
-                                class="oe_highlight" string="Chuyển về nháp"
-                                states="done, None"
-                                groups="feosco_account_asset.group_asset_wareshouse_user"/>
-                        </div>
+                        <button name="act_reset" type="object"
+                            class="oe_highlight" string="Chuyển về nháp"
+                            states="done, None"
+                            groups="feosco_account_asset.group_asset_wareshouse_user"/>
+                        <field name="state" string="Trạng thái" widget="statusbar"/>
+                    </header>
+                    <sheet>
                         <br/>
                         <separator string=""/>
                         <h1>
-                            <label for="contract_id" string="Nghiệm thu cho Hợp đồng"/>
+                            <label for="contract_id" string="Hợp đồng"/>
                             <field name="contract_id" on_change="event_change_contract(contract_id)"/>
-                            <label for="name" string="Tên nghiệm thu"/>
-                            <field name="name"/>
-                            <label for="date" string="Ngày nghiệm thu HĐ"/>
-                            <field name="date" class="oe_inline" required="True"/>
                         </h1>
                         <group>
                             <group>
+                                <field name="name"/>
+                                <field name="date" class="oe_inline" required="True"/>
                                 <field name="location_ids" widget="many2many_tags"/>
                             </group>
                         </group>
                         <group>
-                            <separator string="Thông tin hợp đồng" colspan="4"/>
+                            <separator string="Thông tin chung" colspan="4"/>
                             <field name="line_ids" nolabel="1" model="tree">
-                                <tree string="Nghiệm thu tài sản" editable="top" no_create="true">
+                                <tree string="Các tài sản" editable="top" no_create="true">
                                     <field name="name" readonly="True"/>
                                     <field name="type" />
                                     <field name="user_id"/>

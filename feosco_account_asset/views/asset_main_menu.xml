@@ -1,6 +1,12 @@
 <openerp>
 <data>
 
+    <!-- lock menu Invoicing-->
+    <menuitem name="Invoicing"
+            id="account.menu_finance"
+            groups="feosco_account_asset.group_asset_it_manager"
+            sequence="50"/>
+
     <menuitem id="menu_feosco_root"
               name="Asset Management"
               icon="terp-stock"
@@ -51,15 +57,15 @@
 
     <menuitem parent="menu_feosco_root"
             id="menu_feosco_asset_scan"
-            name="Inventory"
+            name="Kiểm kê"
             sequence="30"
-            groups="account.group_account_invoice,feosco_account_asset.group_asset_wareshouse_user,feosco_account_asset.group_asset_it_user"/>
+            groups="group_asset_wareshouse_user,group_asset_it_user"/>
 
     <menuitem parent="menu_feosco_root"
               id="menu_assset_reporting"
               name="Báo cáo"
               sequence="40"
-              groups="group_asset_wareshouse_user,group_asset_it_user"/>
+              groups="group_asset_wareshouse_user,group_asset_it_user,account.group_account_invoice"/>
 
     <menuitem parent="menu_feosco_root"
               id="menu_feosco_asset_config"

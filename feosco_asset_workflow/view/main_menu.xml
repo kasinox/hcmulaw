@@ -18,7 +18,7 @@
 		          action="asset_contract_action"
 		          id="menu_asset_contract_action"
 		          sequence="20"
-				  groups="feosco_account_asset.group_asset_wareshouse_user"/>
+				  groups="feosco_account_asset.group_asset_wareshouse_user,account.group_account_invoice"/>
 
 		<menuitem parent="menu_asset_wkf"
 		          action="action_asset_stock"
@@ -33,7 +33,7 @@
 				  groups="feosco_account_asset.group_asset_wareshouse_user"/>
 
 
-		<record id="feosco_action_invoice_tree" model="ir.actions.act_window">
+		<record id="feosco_action_invoice" model="ir.actions.act_window">
             <field name="name">Uỷ nhiệm chi</field>
             <field name="res_model">account.invoice</field>
             <field name="view_type">form</field>
@@ -44,10 +44,10 @@
         </record>
 
 		<menuitem parent="menu_asset_wkf"
-		          action="feosco_action_invoice_tree"
-		          id="menu_feosco_action_invoice_tree"
+		          action="feosco_action_invoice"
+		          id="menu_feosco_action_invoice"
 		          sequence="100"
-				  groups="feosco_account_asset.group_asset_wareshouse_user"/>
+				  groups="account.group_account_invoice"/>
 
 		<record id="feosco_action_partner_supplier_form" model="ir.actions.act_window">
 			<field name="name">Nhà CC thiết bị</field>

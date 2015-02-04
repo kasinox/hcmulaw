@@ -4,3 +4,5 @@ import asset_stock
 import asset_contract_line
 import asset_request
 import asset_request_line
+import invoice
+import product

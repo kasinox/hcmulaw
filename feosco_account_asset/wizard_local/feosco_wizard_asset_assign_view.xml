@@ -39,6 +39,7 @@
              multi="True"
              key2="client_action_multi"
              name="Assign Asset"
+             groups="feosco_account_asset.group_asset_wareshouse_user"
              res_model="feosco.wizard.asset.assign"
              src_model="account.asset.asset"
              view_mode="form"

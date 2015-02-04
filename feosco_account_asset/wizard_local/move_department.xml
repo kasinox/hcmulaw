@@ -25,6 +25,7 @@
 
         <act_window id="act_windown_view_move_department"
             multi="True"
+            groups="feosco_account_asset.group_asset_wareshouse_user"
             key2="client_action_multi"
             name="Move Department"
             res_model="feosco.move.department"

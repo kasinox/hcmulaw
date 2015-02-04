@@ -178,15 +178,29 @@ class account_asset_asset(osv.osv):
             res.append((record['id'], name))
         return res
 
+    def _amount_residual(self, cr, uid, ids, name, args, context=None):
+        cr.execute("""SELECT
+                l.asset_id as id, SUM(abs(l.debit-l.credit)) AS amount
+            FROM
+                account_move_line l
+            WHERE
+                l.asset_id IN %s GROUP BY l.asset_id """, (tuple(ids),))
+        res=dict(cr.fetchall())
+        for asset in self.browse(cr, uid, ids, context):
+            res[asset.id] = asset.purchase_value - res.get(asset.id, 0.0) - asset.salvage_value
+        for id in ids:
+            res.setdefault(id, 0.0)
+        return res
+
     _columns = {
 
-        'feosco_asset_gross_from_id': fields.many2one('feosco.asset.gross.from', 'Gross from'),
-        'feosco_purchase_year_id': fields.many2one('feosco.purchase.year', 'Purchase Year'),
-        'feosco_asset_type_id': fields.many2one('feosco.asset.type', 'Type'),
+        'feosco_asset_gross_from_id': fields.many2one('feosco.asset.gross.from', 'Gross from', track_visibility='onchange', readonly=True, states={'draft': [('readonly', False)]}),
+        'feosco_purchase_year_id': fields.many2one('feosco.purchase.year', 'Purchase Year', track_visibility='onchange', readonly=True, states={'draft': [('readonly', False)]}),
+        'feosco_asset_type_id': fields.many2one('feosco.asset.type', 'Type', readonly=True, states={'draft': [('readonly', False)]}),
 
-        'feosco_num': fields.integer('No .'),
-        'feosco_asset_department_id': fields.many2one('feosco.asset.department', 'Department', track_visibility='onchange'),
-        'feosco_qty': fields.integer('Quantity'),
+        'feosco_num': fields.integer('No .', readonly=True, states={'draft': [('readonly', False)]}),
+        'feosco_asset_department_id': fields.many2one('feosco.asset.department', 'Department', track_visibility='onchange', readonly=True, states={'draft': [('readonly', False)]}),
+        'feosco_qty': fields.integer('Quantity', track_visibility='onchange', readonly=True, states={'draft': [('readonly', False)]}),
         'feosco_code': fields.char('Code', size=64, readonly=True, states={'draft':[('readonly', False)]}),
         'feosco_image': fields.binary('Image', readonly=True, states={'draft': [('readonly', False)]}),
         'feosco_print': fields.boolean('Print', readonly=True, states={'draft': [('readonly', False)]}),
@@ -200,19 +214,18 @@ class account_asset_asset(osv.osv):
         'feosco_user_id': fields.many2one('res.users', 'User', readonly=True, states={'draft':[('readonly',False)]},  track_visibility='onchange'),
         'feosco_status_id': fields.many2one('feosco.asset.status', 'Status', readonly=True),
         'feosco_image_his': fields.binary('Image old', readonly=True, states={'draft': [('readonly',False)]}),
-        'feosco_location': fields.char('Location Use'),
-        'feosco_uom_id': fields.many2one('product.uom', 'Uom'),
+        'feosco_location': fields.char('Location Use', readonly=True, states={'draft': [('readonly', False)]}),
+        'feosco_uom_id': fields.many2one('product.uom', 'Uom', track_visibility='onchange', readonly=True, states={'draft': [('readonly', False)]}),
         'feosco_scan_time_id': fields.many2one('feosco.scan.time', 'Scan schedule'),
         'method_time': fields.selection([
                                             ('number', 'Number of Depreciations'),
                                             ('end', 'Ending Date'),
                                             ('percent', 'Percent (%) / Year'),
                                             ], 'Time Method', required=True),
-        'method_period': fields.integer('Period Length'),
-        'feosco_percent': fields.float('Percent (%) of year'),
-        'feosco_depreciated': fields.float('Depreciated (%)'),
-        'feosco_barcode_image': fields.binary('QR code', readonly=True, states={'draft': [('readonly', False)]}),
-
+        'method_period': fields.integer('Period Length' , track_visibility='onchange', readonly=True, states={'draft': [('readonly', False)]}),
+        'feosco_percent': fields.float('Percent (%) of year', track_visibility='onchange', readonly=True, states={'draft': [('readonly', False)]}),
+        'feosco_depreciated': fields.float('Depreciated (%)', track_visibility='onchange', readonly=True, states={'draft': [('readonly', False)]}),
+        'feosco_barcode_image': fields.binary('QR code', readonly=True),
     }
 
     _defaults = {

@@ -9,7 +9,7 @@ class asset_contract_line(osv.Model):
 		'name': fields.char(u'Tên tài sản', required=True),
 		'uom_id': fields.many2one('product.uom', u'Đơn vị tính', required=True),
 		'qty': fields.float(u'Số lượng', required=True),
-		'price': fields.float(u'Giá thành'),
+		'price': fields.float(u'Giá thành', required=True),
 		'tax_ids': fields.many2many('account.tax', 'asset_contract_line_tax_rel', 'line_id', 'tax_id', u'Thuế'),
 		'discount': fields.float(u'Giảm giá % (nếu có)'),
 		'contract_id': fields.many2one('asset.contract', u'Hợp đồng', required=True, ondelete='cascade'),

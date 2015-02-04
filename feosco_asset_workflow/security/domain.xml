@@ -1,0 +1,26 @@
+<openerp>
+    <data>
+
+        <record id="role_asset_request_group_asset_user_department_manager" model="ir.rule">
+            <field name="name">[hcmulaw] Quyền truy cập vào các đề nghị cấp TS người dùng</field>
+            <field name="model_id" ref="feosco_asset_workflow.model_asset_request"/>
+            <field name="domain_force">[('user_id', '=', user.id)]</field>
+            <field name="groups" eval="[(4,ref('feosco_account_asset.group_asset_user_department_manager')), (4,ref('feosco_account_asset.group_asset_user')),(4,ref('feosco_account_asset.group_asset_it_user')),(4,ref('account.group_account_invoice')),(4,ref('account.group_account_user'))]"/>
+        </record>
+
+        <record id="role_asset_request_group_asset_wareshouse_user" model="ir.rule">
+            <field name="name">[hcmulaw] Quyền truy cập vào các đề nghị cấp TS nhân viên phòng thiết bị</field>
+            <field name="model_id" ref="feosco_asset_workflow.model_asset_request"/>
+            <field name="domain_force">[('purchase_user_id', '=', user.id)]</field>
+            <field name="groups" eval="[(4,ref('feosco_account_asset.group_asset_wareshouse_user'))]"/>
+        </record>
+
+
+        <record id="role_asset_request_group_asset_wareshouse_manager" model="ir.rule">
+            <field name="name">[hcmulaw] Quyền truy cập vào các đề nghị cấp TS người quản lý</field>
+            <field name="model_id" ref="feosco_asset_workflow.model_asset_request"/>
+            <field name="domain_force">[(1,'=',1)]</field>
+            <field name="groups" eval="[(4,ref('feosco_account_asset.group_asset_wareshouse_manager'))]"/>
+        </record>
+    </data>
+</openerp>

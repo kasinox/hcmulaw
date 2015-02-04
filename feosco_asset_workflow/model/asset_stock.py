@@ -8,7 +8,7 @@ class asset_stock (osv.Model):
 	_inherit = "mail.thread"
 	_columns = {
 		'name': fields.char(u'Tên', readonly=True, states={'draft': [('readonly', False)]}),
-		'date': fields.datetime(u'Ngày nghiệm thu HĐ', required=True, readonly=True, states={'draft': [('readonly', False)]}),
+		'date': fields.datetime(u'Ngày nghiệm thu', required=True, readonly=True, states={'draft': [('readonly', False)]}),
 		'location_ids': fields.many2many('feosco.asset.department', 'asset_stock_department_rel', 'stock_id', 'department_id', u'Phòng', readonly=True, states={'draft': [('readonly', False)]}),
 		'line_ids': fields.one2many('asset.contract.line', 'stock_id', string=u'Tài sản', readonly=True, states={'draft': [('readonly', False)]}),
 		'contract_id': fields.many2one('asset.contract', u'Từ hợp đồng', readonly=True, states={'draft': [('readonly', False)]}),

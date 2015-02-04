@@ -8,19 +8,35 @@
                 <form string="Hợp đồng">
                     <header>
                         <field name="state" widget="statusbar"/>
-                        <button name="act_active" states="new" type="object" string="Xác nhận đã ký" class="oe_highlight" confirm="Bạn chắc chắn khi thực hiện kích hoạt Hợp đồng, khi hợp đồng có hiệu lực, không thể cập nhật lại dữ liệu"/>
+
+
                     </header>
 	                <sheet>
+                        <div class="oe_right">
+                            <button name="act_active"
+                                states="new" type="object"
+                                string="Xác nhận đã ký"
+                                confirm="Bạn chắc chắn khi thực hiện kích hoạt Hợp đồng, khi hợp đồng có hiệu lực, không thể cập nhật lại dữ liệu"
+                                class="oe_highlight" icon="gtk-execute"/>
+                            <button name="act_reset"
+                                    states="active" type="object" string="Đưa về phác thảo"
+                                    groups="feosco_account_asset.group_asset_it_user,feosco_account_asset.group_asset_it_manager"
+                                    class="oe_highlight" icon="gtk-execute"/>
+                            <button name="act_invoice"
+                                    states="active" type="object"
+                                    string="Tạo uỷ nhiệm chi"
+                                    class="oe_highlight" icon="gtk-execute"/>
+                        </div>
                         <h1>
-                            <label for="name" string="Số hợp đồng"/>
+                            <label for="name" string="Số"/>
                             <field name="name"/>
                         </h1>
 						<group>
 							<group>
+                                <field name="customer_id"/>
                                 <field name="type"/>
                                 <field name="payment_before" attrs="{'required': [('type', '=', 'before')]}"/>
                                 <field name="representative_id"/>
-								<field name="customer_id"/>
                                 <field name="sum_char"/>
                                 <field name="role_ids" widget="many2many_tags"/>
 							</group>

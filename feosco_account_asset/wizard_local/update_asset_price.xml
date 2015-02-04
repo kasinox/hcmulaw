@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+	    <record model="ir.ui.view" id="wiz_update_asset_price">
+	        <field name="name">Cập nhật giá</field>
+	        <field name="model">wiz.update.asset.price</field>
+	        <field name="arch" type="xml">
+	            <form string="Cập nhật giá">
+                    <group>
+                        <group>
+                            <field name="purchase_value"/>
+                            <field name="salvage_value"/>
+                            <field name="percent"/>
+                            <field name="depreciated"/>
+                            <button name="update_asset_price" string="Cập nhật giá" icon="gtk-execute" type="object" class="oe_highlight"/>
+                        </group>
+                    </group>
+	            </form>
+	        </field>
+	    </record>
+
+	    <record model="ir.actions.act_window" id="act_wiz_update_asset_price">
+	        <field name="name">Cập nhật giá</field>
+	        <field name="type">ir.actions.act_window</field>
+	        <field name="res_model">wiz.update.asset.price</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">form</field>
+            <field name="target">new</field>
+	    </record>
+
+
+
+
+
+
+
+    </data>
+</openerp>

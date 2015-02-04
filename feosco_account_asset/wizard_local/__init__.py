@@ -4,3 +4,4 @@ import export_import
 import excel
 import print_selection
 import move_department
+import update_asset_price
